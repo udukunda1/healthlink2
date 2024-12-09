@@ -1,0 +1,17 @@
+.home-loader {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #3752A2;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-loader img {
+    width: 36vw;
+    height: 80vh;
+}

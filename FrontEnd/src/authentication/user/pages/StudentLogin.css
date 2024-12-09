@@ -15,6 +15,12 @@
     color: #273B68;
 }
 
+[data-theme="dark"] {
+    .student-login p, .student-login form label {
+        color: white;
+    }
+}
+
 .student-login .message {
     color: white;
 }

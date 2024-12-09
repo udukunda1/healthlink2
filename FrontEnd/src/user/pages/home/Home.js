@@ -15,6 +15,7 @@ import call from '../../../image/call.svg';
 import arrow from '../../../image/arrow.svg';
 import add from '../../../image/add.svg';
 import com from '../../../image/com.svg';
+import HomeLoader from '../../../shared/components/UI/homeloader/HomeLoader';
 
 function Home() {
   const response = useLoaderData();
@@ -54,11 +55,11 @@ function Home() {
             when every second counts. Let us help you
             find urgent medical support without delay.
             </p>
-            <p className='cta'><img src={call} alt='call' />0780058709</p>
+            <p className='cta'><img src={call} alt='call' />+250780058709</p>
           </div>
         </div>
         <div className='item two'>
-        <div className='content'>
+          <div className='content'>
           <img src={add} alt='siren' />
           <p>Register Pharmacy</p>
           </div>
@@ -70,7 +71,7 @@ function Home() {
               today and make a difference!
             </p>
             <div  className='button'>
-            <Button type='a' className='cta-white white'>Register <img src={arrow} alt='arrow' /> </Button>
+            <Link to='/authenticate/pharmacy/signup'><Button type='a' className='cta-white white'>Register <img src={arrow} alt='arrow' /> </Button></Link>
             </div>
           </div>
         </div>
@@ -86,18 +87,13 @@ function Home() {
              collaborate, and support a healthier future.
             </p>
             <div  className='button'>
-            <Button type='a' className='cta-white white'>Join <img src={arrow} alt='arrow' /> </Button>
+            <Link to='/authenticate/student/signup'><Button type='a' className='cta-white white'>Join <img src={arrow} alt='arrow' /> </Button></Link>
             </div>
           </div>
         </div>
       </div>
       <div className='home'>
-      {/* <div className='cta-findmedicine'>
-      <h2 className='cta-findmedicine__text'>Find Specific medicines in Real time</h2>
-      <div className='cta-findmedicine__button'>
-      <Link to="/search"><Button>Find</Button></Link>
-      </div>
-      </div> */}
+
       <StudentExperience />
       <div className='cta-getstarted'>
       <p className='cta-getstarted__text'>Ready to get started? Join our commuity and make finding medication stressfree!</p>
@@ -107,7 +103,7 @@ function Home() {
       </div>
       <section className='featured-pharmacies'>
         <h1>Featuted Pharmacies.</h1>
-        <Suspense fallback={<LoadingSpinner asOverlay />}>
+        <Suspense fallback={<HomeLoader />}>
         <Await resolve={response.pharmas}>
         {(loadedPharmas) => <PharmacyItemsHome pharmas={loadedPharmas} />}
         </Await>

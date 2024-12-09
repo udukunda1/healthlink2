@@ -16,3 +16,18 @@
 .datails-container .item1 {
     color: #005450;
 }
+
+[data-theme="dark"] {
+    .datails-container .item1 {
+        color: #1FCEBF;
+    }
+    .datails-container .item2 {
+        color: white;
+    }
+    .datails-container .item3 {
+        color: white;
+    }
+    .pharmacy-details__reviews h2 {
+        color: #1FCEBF;
+    }
+}

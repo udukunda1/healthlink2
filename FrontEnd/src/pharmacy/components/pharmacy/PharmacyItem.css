@@ -71,8 +71,15 @@
 
 .pharmacy-card__content .content {
     color: black;
-    /* padding-bottom: 0.1rem; */
-    
+}
+
+[data-theme="dark"] {
+    .pharmacy-card__content .content {
+        color: white;
+    }
+    .pharmacy-card {
+        border: 0.1px solid #1FCEBF;
+    }
 }
 
 

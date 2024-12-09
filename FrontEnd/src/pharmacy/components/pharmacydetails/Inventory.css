@@ -2,6 +2,12 @@
     padding-bottom: 16px;
 }
 
+[data-theme="dark"] {
+    .inventory-list h3 {
+        color: white;
+    }
+}
+
 .inventory-list ul {
     display: flex;
     flex-direction: column;
@@ -14,6 +20,16 @@
     align-items: center;
     padding: 0.2rem;
     color: #005450;
+}
+
+[data-theme="dark"] {
+    .inventory-list h3 {
+        color: white;
+    }
+
+    .inventory-list li {
+        color: #1FCEBF;
+    }
 }
 
 .inventory-list span{

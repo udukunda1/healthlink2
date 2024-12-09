@@ -19,6 +19,12 @@
     color: white;
 }
 
+[data-theme="dark"] {
+    .pharmacy-signup p, .pharmacy-signup form label {
+        color: white;
+    }
+}
+
 .pharmacy-signup form {
     display: flex;
     flex-direction: column;

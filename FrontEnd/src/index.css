@@ -12,6 +12,7 @@ ul {
 
 body {
   margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,6 +28,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* [data-theme="dark"] {
+  body {
+          background: #0F1214 !important;
+      }
+  } */
 
 @media only screen and (max-width: 768px) {
   body {

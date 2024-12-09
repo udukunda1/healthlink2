@@ -7,7 +7,7 @@ function Inventory({lastUpdated, medicines}) {
 
     if(medicines.length === 0){
         return (
-            <h3 style={{ padding: '0 6rem'}}>no medicines yet</h3>
+            <h3 className="not-available" style={{ padding: '0 6rem'}}>no medicines yet</h3>
         )
     }
 

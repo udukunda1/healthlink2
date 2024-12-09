@@ -1,0 +1,19 @@
+.side-drawer {
+    /* background: blueviolet; */
+    margin-right: 97px;
+}
+
+.side-drawer p {
+    font-size: 1.3rem;
+    color: #1FCEBF;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 31px;;
+}
+
+[data-theme="dark"] {
+    .MuiDrawer-paper {
+        background: var(--dark-theme-1);
+    }
+}

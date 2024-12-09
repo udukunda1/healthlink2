@@ -3,10 +3,12 @@
 }
 
 [data-theme="dark"] {
-    --dark-green: #000000;
-    --font-color: white;
+    --dark-theme-1: #0F1214;
+    --dark-theme-2: #212121;
+    --dark-theme-3: #3c3c3c;
 }
 
-body{
-    color: var(--font-color);
+
+ body{
+    background: var(--dark-theme-3);
 }

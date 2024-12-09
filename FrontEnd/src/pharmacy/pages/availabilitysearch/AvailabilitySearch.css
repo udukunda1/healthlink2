@@ -17,3 +17,9 @@
     color: #273B68;
     padding: 1rem 0;
 }
+
+[data-theme="dark"] {
+    .availability-search > h2 {
+        color: white;
+    }
+}

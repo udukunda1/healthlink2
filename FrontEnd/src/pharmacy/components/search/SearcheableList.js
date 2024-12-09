@@ -21,7 +21,7 @@ function SearchableList({ items, itemKeyFn, children }) {
       {(!searchTerm)?
       <div className='content-before-typing'>
       <h2>Instantly access what matters most.</h2>
-      <div><FaSearch style={{width: '6rem', height: '6rem', color: '#273B68'}} /></div>
+      <div><FaSearch style={{width: '6rem', height: '6rem', color: '#1FCEBF'}} /></div>
       </div>
       :
       <div className='conten-after-typing'>

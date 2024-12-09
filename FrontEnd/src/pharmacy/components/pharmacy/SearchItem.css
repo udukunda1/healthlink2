@@ -58,6 +58,27 @@
     color: #005450;
 }
 
+[data-theme="dark"] {
+    .search-item-card__content h3,
+    .search-item-card__content h4 {
+    color: #1FCEBF;
+}
+.search-item-card__content .others {
+    color: #1FCEBF;
+}
+.search-item-card:hover {
+    box-shadow: 0 0 10px #1FCEBF;
+}
+
+.search-item-card {
+    box-shadow: 0 0 5px #1FCEBF;
+}
+
+.search-item-card__content {
+    color: white;
+}
+}
+
 .search-item-card__content h4 {
     align-self: flex-start;
     margin: 0.5rem 0 0.5rem 1rem;

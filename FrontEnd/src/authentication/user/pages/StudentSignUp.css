@@ -25,6 +25,12 @@
     color: white;
 }
 
+[data-theme="dark"] {
+    .student-signup p, .student-signup form label {
+        color: white;
+    }
+}
+
 
 .student-signup form input {
     width: 100%;

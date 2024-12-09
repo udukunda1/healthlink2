@@ -1,5 +1,4 @@
 dialog {
-    background: white;
     position: fixed;
     top: 20vh;
     left: 32.5vw;
@@ -8,6 +7,12 @@ dialog {
     padding: 0 !important;
     background: linear-gradient(-50deg, #1FCEBF , #3752A2 );
   }
+
+  [data-theme="dark"] {
+    dialog {
+      background: var(--dark-theme-1);
+  }
+}
 
   @media (max-width: 410px) {
     dialog {

@@ -44,3 +44,15 @@
     padding-top: 1rem;
     color: #6B3AEA;
   }
+
+  [data-theme="dark"] {
+    .content-before-typing h2{
+      color: #1FCEBF;
+    }
+    .content-before-typing div{
+      color: #1FCEBF;
+    }
+    .conten-after-typing span {
+      color: white;
+    }
+}

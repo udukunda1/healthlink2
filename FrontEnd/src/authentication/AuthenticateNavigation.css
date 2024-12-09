@@ -19,6 +19,12 @@
     cursor: pointer;
 }
 
+[data-theme="dark"] {
+    .authenticate-navigation button {
+        background: var(--dark-theme-2);
+    }
+}
+
 .authenticate-navigation .left {
     border-radius: 10px 0 0 0;
 }

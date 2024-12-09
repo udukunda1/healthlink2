@@ -1,6 +1,5 @@
 import SearchableList from '../../components/search/SearcheableList';
 import './AvailabilitySearch.css';
-// import { pharmacies } from '../../../shared/utils/data';
 import SearchItem from '../../components/pharmacy/SearchItem';
 import { useLoaderData, useNavigation } from 'react-router-dom';
 import LoadingSpinner from '../../../shared/components/UI/loadingspinner/LoadingSpinner';

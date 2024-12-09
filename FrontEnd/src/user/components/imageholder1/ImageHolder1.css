@@ -25,9 +25,17 @@
   .img__bg--item-title {
     padding: 0.5rem 0;
     color: #1FCEBF;
-   
   }
 
   .img__bg--item-content {
     font-size: 1.03rem;
   }
+
+  [data-theme="dark"] {
+    .img__bg--item-content {
+      color: white;
+    }
+    .img__bg--item {
+      background: var(--dark-theme-3);
+}
+ }

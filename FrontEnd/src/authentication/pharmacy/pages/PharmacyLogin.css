@@ -53,3 +53,9 @@
     align-self: center;
     margin: 2rem 0;
 }
+
+[data-theme="dark"] {
+    .pharmacy-login p, .pharmacy-login form label {
+        color: white;
+    }
+}

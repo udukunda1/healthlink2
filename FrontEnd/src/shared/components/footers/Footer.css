@@ -6,6 +6,12 @@
 
 }
 
+[data-theme="dark"] {
+    .footer {
+        background: var(--dark-theme-1);
+    }
+}
+
 .footer .inner {
     width: 86vw;
     height: 39vh;

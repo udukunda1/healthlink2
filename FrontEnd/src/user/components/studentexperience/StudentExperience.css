@@ -4,6 +4,12 @@
     font-size: 1.5rem;
 }
 
+[data-theme="dark"] {
+    .student-experience__heading {
+        color: white;
+    }
+}
+
 .student-experience {
     /* border: 1px solid var(--dark-green); */
     /* padding: 2rem; */

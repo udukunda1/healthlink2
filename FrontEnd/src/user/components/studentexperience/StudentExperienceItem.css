@@ -47,6 +47,18 @@
     font-weight: 800;
 }
 
+[data-theme="dark"] {
+    .StudentExperienceItem__heading--name {
+        color: white;
+    }
+    /* .StudentExperienceItem {
+        background: var(--dark-theme-2);
+    } */
+    .StudentExperienceItem__content {
+        color: white;
+    }
+}
+
 .StudentExperienceItem__content {
     padding: 1rem;
 }

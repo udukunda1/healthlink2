@@ -13,12 +13,12 @@ function PharmcyStudentReviewsItem({name, content, image}) {
                 <img src={`${imagePath}${image}`} alt='img' />
                 </div>
                 <div className="PharmcyStudentReviewsItem__heading--name">
-                    <p>{name}</p>
+                    <p className='name'>{name}</p>
                     <p className='stars'><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></p>
                 </div>
             </div>
             <div className="PharmcyStudentReviewsItem__content">
-                <p>{content}</p>
+                <p className='name'>{content}</p>
             </div>
         </div>
     )

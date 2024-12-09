@@ -1,9 +1,5 @@
 import './PharmacyItemsHome.css';
 import PharmacyItem from './PharmacyItem';
-import Button from '../../../shared/components/UI/Button/Button';
-import { Link } from 'react-router-dom';
-
-
 
 function PharmacyItemsHome({pharmas}) {
 

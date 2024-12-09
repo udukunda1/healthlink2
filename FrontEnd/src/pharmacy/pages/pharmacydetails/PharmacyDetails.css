@@ -9,6 +9,15 @@
     width: 100%;
 }
 
+[data-theme="dark"] {
+    .details-page {
+      background: var(--dark-theme-1);
+  }
+  .pharmacy-details {
+    background: var(--dark-theme-2);
+}
+}
+
 @media (max-width: 410px) {
     .pharmacy-details {
         display: flex;
@@ -34,6 +43,7 @@
     font-style: italic;
     margin: 0 auto;
 }
+
 
 .pharmacy-details__head h1 {
     color: var(--dark-green);
@@ -123,6 +133,12 @@
     color: #3752A2;
 }
 
+[data-theme="dark"] {
+    .services  li, .services  h3, .not-available{
+        color: white;
+    }
+}
+
 .pharmacy-details .buttons {
     margin-top: 20px;
     /* background: #3752A2; */
@@ -146,6 +162,15 @@
     text-align: center;
     padding-bottom: 52px;
     color: #005450;
+}
+
+[data-theme="dark"] {
+    .pharmacy-details__head p{
+        color: white;
+    }
+    .pharmacy-details__reviews h2 {
+        color: #1FCEBF;
+    }
 }
 
 @media (max-width: 410px) {

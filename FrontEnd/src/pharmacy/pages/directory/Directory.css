@@ -3,6 +3,12 @@
     color: #273B68;
 }
 
+[data-theme="dark"] {
+    .pharmacies h1 {
+      color: white;
+  }
+}
+
 .pharmacies {
     margin: 0 5rem;
 }

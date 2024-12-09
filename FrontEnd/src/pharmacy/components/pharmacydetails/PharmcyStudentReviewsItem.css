@@ -23,6 +23,12 @@
     align-items: center;
 }
 
+[data-theme="dark"] {
+    .PharmcyStudentReviewsItem__heading .name, .PharmcyStudentReviewsItem__content .name {
+        color: white;
+    }
+}
+
 .PharmcyStudentReviewsItem__heading--image {
     width: 3rem;
     height: 3rem;
