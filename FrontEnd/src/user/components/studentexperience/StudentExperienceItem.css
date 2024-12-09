@@ -1,0 +1,56 @@
+
+.StudentExperienceItem {
+    min-height: 10rem;
+    width: 22.6vw;
+    border: 0 solid #1FCEBF; /* changed */
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 0 3px #1FCEBF; /* changed */
+}
+
+@media (max-width: 410px) {
+    .StudentExperienceItem {
+        min-height: 15rem;
+        width: 85%;
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+}
+
+.StudentExperienceItem__heading {
+    display: flex;
+    align-items: center;
+}
+
+.StudentExperienceItem__heading--image {
+    width: 3rem;
+    height: 3rem;
+    background: #1FCEBF;
+    border-radius: 50%;
+    margin: 0.5rem 0.7rem;
+    overflow: hidden;       /* Hide overflow to keep the image within the circle */
+    display: flex;          /* Center the image */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1FCEBF;
+}
+
+.StudentExperienceItem__heading--image img {
+    width: 100%;            /* Make the image take up full width */
+    height: 100%;           /* Adjust height to fit */
+    object-fit: cover;      /* Crop to fill the container while preserving aspect ratio */
+  }
+
+.StudentExperienceItem__heading--name {
+    color: black;
+    font-weight: 800;
+}
+
+.StudentExperienceItem__content {
+    padding: 1rem;
+}
+
+.StudentExperienceItem__heading--name .stars {
+    color: gold;
+}

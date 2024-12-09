@@ -1,0 +1,6 @@
+.error-page{
+    min-height: 62vh;
+    text-align: center;
+    color: red;
+    padding-top: 3rem;
+}

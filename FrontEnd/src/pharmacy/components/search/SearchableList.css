@@ -1,0 +1,46 @@
+
+.searchable-list {
+    width: 70vw;
+    min-height: 70vh;
+}
+
+@media (max-width: 410px) {
+  .searchable-list {
+      width: 100%;
+  }
+}
+
+.searchable-list li {
+  list-style: none;
+}
+
+.searchable-list input {
+    width: 60%;
+    padding: 0.75rem;
+    border: 1px solid #1FCEBF;
+    border-radius: 6px;
+    color: var(--dark-green);
+    font: inherit;
+  }
+
+  .searchable-list input:focus {
+    outline: none;
+    border: 2px solid #1FCEBF;
+  }
+
+  .content-before-typing {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .conten-after-typing span {
+    color: var(--dark-green);
+  }
+
+  .conten-after-typing h2 {
+    padding-top: 1rem;
+    color: #6B3AEA;
+  }

@@ -1,0 +1,11 @@
+.student-experience__heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.student-experience {
+    /* border: 1px solid var(--dark-green); */
+    /* padding: 2rem; */
+    margin-top: 241px;
+}

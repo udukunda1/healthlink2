@@ -1,0 +1,12 @@
+:root {
+    --dark-green: #0e4f1f;
+}
+
+[data-theme="dark"] {
+    --dark-green: #000000;
+    --font-color: white;
+}
+
+body{
+    color: var(--font-color);
+}

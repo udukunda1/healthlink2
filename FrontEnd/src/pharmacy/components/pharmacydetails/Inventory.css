@@ -1,0 +1,21 @@
+.inventory-list h3 {
+    padding-bottom: 16px;
+}
+
+.inventory-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.inventory-list li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem;
+    color: #005450;
+}
+
+.inventory-list span{
+    padding-left: 0.3rem;
+}

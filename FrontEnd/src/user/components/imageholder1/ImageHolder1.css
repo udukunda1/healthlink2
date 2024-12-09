@@ -1,0 +1,33 @@
+
+.img__bg {
+    background: url('../../../image/home.svg'); /*linear-gradient(to right, transparent, transparent),*/
+    width: 100%;
+    /* height: 68vh; */
+    background-size: cover;
+    background-position:0% 40%;
+    padding: 14vh 0;
+  }
+
+  .img__bg--item {
+    width: 25%;
+    height: 147px;
+    background: white;
+    margin-left: 5% ;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.08);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    flex-direction: column;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  .img__bg--item-title {
+    padding: 0.5rem 0;
+    color: #1FCEBF;
+   
+  }
+
+  .img__bg--item-content {
+    font-size: 1.03rem;
+  }

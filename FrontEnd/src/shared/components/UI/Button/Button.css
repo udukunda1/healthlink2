@@ -1,0 +1,55 @@
+.ui-button {
+    background: #1FCEBF;
+    color: white;
+    font: inherit;
+    border: 2.68px solid #1FCEBF;
+    border-radius: 44.65px;
+    cursor: pointer;
+    min-width: 118.78px;
+    height: 33.94px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.ui-button:hover {
+    background: #24F2E1;
+    border: 2.68px solid #24F2E1;
+}
+
+.ui-button.red {
+    background: #F72C5B;
+    color: white;
+    border: 1.5px solid #F72C5B;
+}
+
+.ui-button.red:hover {
+    background: white;
+    color: #F72C5B;
+    border: 2px solid #F72C5B; /* Change border color on hover */
+}
+
+.ui-button.red:active {
+    background: #F72C5B;
+    color: white;
+}
+
+/*by default it is cta-blue which follows btn styling*/
+.cta-white {
+    background: rgba(255, 255, 255, 0);
+    color: #1FCEBF !important;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.white {
+    border: 2px solid white;
+    color: white !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cta-white:hover {
+    background: #1FCEBF; /* Change background on hover */
+    color: white !important; /* Change text color on hover */
+}

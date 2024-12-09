@@ -1,0 +1,55 @@
+.student-signup {
+    /* background: blue; */
+    min-height: 60vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 150px;
+}
+
+.student-signup form {
+    display: flex;
+    flex-direction: column;
+    /* background: red; */
+    width: 50%;
+}
+.student-signup p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #273B68;
+}
+
+.student-signup .message {
+    color: white;
+}
+
+
+.student-signup form input {
+    width: 100%;
+    margin: 1rem 0;
+    height: 2rem;
+    outline: none;
+    font-family: inherit;
+    font-size: medium;
+    border: 1px solid var(--dark-green);
+    border-radius: 6px;
+    box-shadow: 0 0 2px var(--dark-green);
+}
+
+.student-signup form input:focus {
+    box-shadow: 0 0 5px var(--dark-green);
+}
+
+.student-signup form label {
+    font-size: medium;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.student-signup #button {
+    width: 50%;
+    align-self: center;
+    margin: 2rem 0;
+}

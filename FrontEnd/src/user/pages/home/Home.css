@@ -1,0 +1,112 @@
+.cta-findmedicine {
+    padding: 2rem 1rem;
+    display: flex;
+}
+
+.actions {
+    position: absolute;
+    width: 71vw;
+    height: 38vh;
+    top: 68vh;
+    left: 14.5vw;
+    border-radius: 17.78px;
+    display: flex;
+    overflow: hidden;
+}
+
+.actions .cta {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    gap: 9px;
+}
+
+.content2 .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 0;
+}
+
+.content2 p {
+    color: white;
+}
+
+.actions .item {
+    width: 33.33%;
+    height: 100%;
+}
+
+.actions .one {
+    background: #1FCEBF;
+}
+
+.actions .two {
+    background: #3752A2;
+}
+
+.actions .three {
+    background: #273B68;
+}
+
+.actions .content {
+    padding: 15px 30px 0 30px;
+    color: white;
+    display: flex;
+    align-items: center
+}
+.actions .content p{
+   margin-left: 1rem;
+   font-weight: bold;
+}
+
+.actions .content2 p{
+    padding: 21px 37px 0 56px;
+ }
+
+.home {
+    margin: 0 178px;
+}
+
+.cta-findmedicine__button {
+    margin-left: 6rem;
+}
+
+.cta-getstarted {
+    padding: 2rem 1rem;
+    display: flex;
+}
+
+.cta-getstarted__text {
+    width: 70vw;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 410px) {
+    .cta-getstarted__text {
+       width: 70%;
+    }
+}
+
+.cta-getstarted__button {
+    margin-left: 3rem;
+}
+
+.featured-pharmacies {
+    min-height: 80vh;
+}
+
+.featured-pharmacies h1 {
+    margin: 1.5rem;
+    color: #273B68;
+    font-size: 1.5rem;
+}
+
+.featured-pharmacies .bottombutton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}

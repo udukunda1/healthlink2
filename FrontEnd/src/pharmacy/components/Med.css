@@ -1,0 +1,27 @@
+.med {
+    border: 1px solid green;
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-evenly;
+    margin: 0.5rem 0;
+}
+
+.med button {
+    background: red;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    width: 4rem;
+    cursor: pointer;
+    box-shadow: 0 0 2px black;
+}
+
+.med button:hover {
+    background: white;
+    color: red;
+}
+
+.med button:active {
+    background: red;
+    color: white;
+}

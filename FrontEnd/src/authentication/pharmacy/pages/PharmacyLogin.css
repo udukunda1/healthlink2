@@ -1,0 +1,55 @@
+.pharmacy-login {
+    /* background: blue; */
+    min-height: 60vh;
+    margin-left: 30%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pharmacy-login p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #273B68;
+}
+
+.pharmacy-login .message {
+    color: white;
+}
+
+.pharmacy-login form {
+    display: flex;
+    flex-direction: column;
+    /* background: red; */
+    width: 50%;
+}
+
+.pharmacy-login form input {
+    width: 100%;
+    margin: 1rem 0;
+    height: 2rem;
+    outline: none;
+    font-family: inherit;
+    font-size: medium;
+    border: 1px solid var(--dark-green);
+    border-radius: 6px;
+    box-shadow: 0 0 2px var(--dark-green);
+}
+
+.pharmacy-login form input:focus {
+    box-shadow: 0 0 5px var(--dark-green);
+}
+
+.pharmacy-login form label {
+    font-size: medium;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.pharmacy-login #button {
+    width: 50%;
+    align-self: center;
+    margin: 2rem 0;
+}

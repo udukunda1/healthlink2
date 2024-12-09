@@ -1,0 +1,61 @@
+dialog {
+    background: white;
+    position: fixed;
+    top: 20vh;
+    left: 32.5vw;
+    min-height: 59%;
+    width: 35vw;
+    padding: 0 !important;
+    background: linear-gradient(-50deg, #1FCEBF , #3752A2 );
+  }
+
+  @media (max-width: 410px) {
+    dialog {
+      width: 75%
+    }
+}
+
+  .place-holder__content {
+    color: white;
+    font-weight: bold;
+    padding-top: 0.4rem;
+  }
+
+  @media (max-width: 410px) {
+    .place-holder__content {
+      text-align: center;
+    }
+}
+
+  dialog .content {
+    margin: 27px 88px 40px 81px;
+    min-height: 147px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* .content-content {
+    padding: 0 0 3rem 1.5rem;
+  } */
+
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5); /* Custom backdrop color */
+  }
+
+  dialog {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-buttons {
+    margin: 0 88px 17px 81px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  dialog .placeholder {
+    margin: 9px 25px;
+  }

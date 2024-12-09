@@ -1,0 +1,7 @@
+.PharmacyItemsDirectory{
+    display: flex;
+    margin: 0 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}

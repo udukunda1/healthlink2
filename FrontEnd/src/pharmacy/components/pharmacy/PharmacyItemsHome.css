@@ -1,0 +1,13 @@
+.PharmacyItemsHome{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media (max-width: 410px) {
+    .PharmacyItemsHome {
+        flex-direction: column; /* Stack items vertically */
+        margin: 2rem 1rem; /* Reduce margin */
+        justify-content: center; /* Center items */
+    }
+}

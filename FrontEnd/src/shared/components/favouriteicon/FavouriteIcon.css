@@ -1,0 +1,43 @@
+.favourite-icon{
+    width: 3rem;
+    height: 3rem;
+    background-color: #273B68;
+    color: white;
+    border-radius: 50%;
+    position: fixed;
+    right: 0;
+    bottom: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.8rem;
+    box-shadow: 0 0 10px var(--dark-green);
+}
+
+@media (max-width: 410px) {
+    .favourite-icon {
+        width: 6rem;
+        height: 6rem;
+        bottom: 50vh;
+    }
+}
+
+.favourite-icon:hover {
+    cursor: pointer;
+}
+
+.favourite-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favourite-modal h3 {
+    color: white;
+    padding-bottom: 0.5rem;
+}
+
+.favourite-modal p {
+    color: rgba(0, 0, 0, 0.6)
+}
+

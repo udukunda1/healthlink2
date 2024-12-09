@@ -1,0 +1,6 @@
+.PharmacyStudentReviews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    padding-bottom: 2rem;
+}
