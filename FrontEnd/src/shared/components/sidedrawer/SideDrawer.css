@@ -3,8 +3,7 @@
     margin-right: 97px;
 }
 
-.side-drawer p {
-    font-size: 1.3rem;
+.side-drawer h3 {
     color: #1FCEBF;
     display: flex;
     align-items: center;

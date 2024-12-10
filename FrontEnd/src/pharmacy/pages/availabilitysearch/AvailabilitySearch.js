@@ -6,6 +6,7 @@ import LoadingSpinner from '../../../shared/components/UI/loadingspinner/Loading
 import { useEffect } from 'react';
 import useOpenModal from '../../../shared/hooks/useOpenModal';
 import Modal from '../../../shared/components/UI/Modal/modal';
+import SpeechRec from '../../components/speechrecogn.js/SpeechRec';
 
 function AvailabilitySearch(){
   const response = useLoaderData();

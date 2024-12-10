@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import './SearchableList.css';
 import { FaSearch } from 'react-icons/fa';
+import SpeechRec from '../speechrecogn.js/SpeechRec';
 
 
 function SearchableList({ items, itemKeyFn, children }) {
   const [searchTerm, setSearchTerm] = useState('');
+  const [word ,setWord] = useState('')
 
   const searchResults = items.filter((item) =>
     JSON.stringify(item).toLowerCase().includes(searchTerm.toLowerCase())
@@ -15,9 +17,21 @@ function SearchableList({ items, itemKeyFn, children }) {
     setSearchTerm(event.target.value);
   }
 
+  useEffect(()=>{
+    setSearchTerm(word)
+  }, [word]);
+
   return (
     <div className="searchable-list">
-      <input type="search" placeholder="Search For everything" onChange={handleChange} />
+      <div className='inputs'>
+        <div>
+        <input type="search" value={searchTerm} placeholder="Search For everything" onChange={handleChange} />
+        </div>
+      <div>
+      <SpeechRec word={word} setWord={setWord} />
+      </div>
+      </div>
+      {/* <p style={{color: 'red'}}>{word}</p> */}
       {(!searchTerm)?
       <div className='content-before-typing'>
       <h2>Instantly access what matters most.</h2>

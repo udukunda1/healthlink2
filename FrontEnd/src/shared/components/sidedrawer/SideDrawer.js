@@ -10,6 +10,7 @@ import language from '../../../image/sidedrawer/Google Translate.svg';
 import privacy from '../../../image/sidedrawer/Privacy.svg';
 import terms from '../../../image/sidedrawer/Terms and Conditions.svg';
 import DarkMode from "../UI/DarkMode/DarkMode";
+import Slide from '../slider/Slide';
 
 
 const RightDrawer = () => {
@@ -30,12 +31,12 @@ const RightDrawer = () => {
   // Content inside the drawer
   const drawerContent = (
     <div className="side-drawer">
-    <p> <img src={settin} alt="settin" />Settings</p>
-    <p><img src={moon} alt="settin" />Dark Mode <DarkMode /></p>
-    <p><img src={size} alt="settin" />Font Size</p>
-    <p><img src={language} alt="settin" />Language</p>
-    <p><img src={privacy} alt="settin" />Privacy Policy</p>
-    <p><img src={terms} alt="settin" />Terms and Conditions</p>
+    <h3 style={{fontSize: '17px'}}> <img src={settin} alt="settin" />Settings</h3>
+    <h3><img src={moon} alt="settin" />Dark Mode <DarkMode /></h3>
+    <h3><img src={size} alt="settin" />Font Size <Slide /></h3>
+    <h3><img src={language} alt="settin" />Language</h3>
+    <h3><img src={privacy} alt="settin" />Privacy Policy</h3>
+    <h3><img src={terms} alt="settin" />Terms and Conditions</h3>
     </div>
   );
 
