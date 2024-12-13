@@ -12,6 +12,7 @@
     align-items: center;
     padding-top: 0.8rem;
     box-shadow: 0 0 10px var(--dark-green);
+    /* z-index: 18; */
 }
 
 @media (max-width: 410px) {

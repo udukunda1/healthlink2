@@ -11,6 +11,7 @@ import privacy from '../../../image/sidedrawer/Privacy.svg';
 import terms from '../../../image/sidedrawer/Terms and Conditions.svg';
 import DarkMode from "../UI/DarkMode/DarkMode";
 import Slide from '../slider/Slide';
+import SlideContrast from "../slider/SlideContrast";
 
 
 const RightDrawer = () => {
@@ -31,10 +32,11 @@ const RightDrawer = () => {
   // Content inside the drawer
   const drawerContent = (
     <div className="side-drawer">
-    <h3 style={{fontSize: '17px'}}> <img src={settin} alt="settin" />Settings</h3>
+    <h3 style={{fontSize: '17px'}}> <img src={settin} alt="health link settings" />Settings</h3>
     <h3><img src={moon} alt="settin" />Dark Mode <DarkMode /></h3>
     <h3><img src={size} alt="settin" />Font Size <Slide /></h3>
-    <h3><img src={language} alt="settin" />Language</h3>
+    <h3><img src={size} alt="settin" />Brightness <SlideContrast /></h3>
+    <h3><img src={language} alt="settin" />Language </h3>
     <h3><img src={privacy} alt="settin" />Privacy Policy</h3>
     <h3><img src={terms} alt="settin" />Terms and Conditions</h3>
     </div>
@@ -46,7 +48,7 @@ const RightDrawer = () => {
       {/* <Button variant="contained" onClick={toggleDrawer(true)}>
         Open Right Drawer
       </Button> */}
-      <img src={settings} onClick={toggleDrawer(true)} alt='setting' />
+      <img src={settings} style={{cursor: 'pointer'}} onClick={toggleDrawer(true)} alt='health link settings' />
 
       {/* Right Drawer */}
       <Drawer
@@ -56,7 +58,6 @@ const RightDrawer = () => {
               width: "29.7vw", // Set width in viewport width
               borderRadius: '25px 0 0 25px',
               padding: '50px 20px',
-
             }
           }}
         open={isDrawerOpen}

@@ -5,13 +5,13 @@ import './AuthenticateNavigation.css';
 
 function AuthenticateNavigation() {
     return (
-        <>
+        <div className='wrapper'>
         <div className='rem3-top-place-holder'></div>
         <div className="authenticate-navigation">
         <NavLink to='/authenticate/student/' className={({isActive}) => isActive? 'active' : ''}><button className="left">student</button></NavLink>
         <NavLink to='/authenticate/pharmacy/' className={({isActive}) => isActive? 'active' : ''}><button className="right">Pharmacy</button></NavLink>
         </div>
-        </>
+        </div>
     )
 }
 

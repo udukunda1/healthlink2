@@ -33,7 +33,7 @@ function Footer() {
                     </div>
                     <div className='inner__one--four'>
                     <p className='header'>Social Media</p>
-                    <p className='icons'><img src={fb} alt='socio icons' /><img src={ig} alt='socio icons' /><img src={yt} alt='socio icons' /></p>
+                    <p className='icons'><img src={fb} alt='our facebook' /><img src={ig} alt='our instagram' /><img src={yt} alt='our youtube' /></p>
                     </div>
                 </div>
                 <div className='inner__two'>

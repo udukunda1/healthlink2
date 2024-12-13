@@ -29,6 +29,7 @@ const Modal = forwardRef(({children, addButton='', ...props}, ref) => {
      initial={{opacity: 0, y: -30}}
      animate={{opacity: 1, y: 0}}
      {...props}
+     className='mymodal'
      >
       <div className='placeholder'>
         <img src={logo2} alt='logo2' />

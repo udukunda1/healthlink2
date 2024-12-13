@@ -60,6 +60,7 @@ function PharmacyLogin(){
       }, [logData, openModal])
 
     return (
+        <div className='wrapper'>
         <div className="pharmacy-login">
         {isLoading && <LoadingSpinner asOverlay />}
         <Modal  ref={modalRef}>
@@ -73,6 +74,7 @@ function PharmacyLogin(){
             <input type="password" id="Password" ref={pssRef} required />
             <Button type='submit' id="button" onClick={handleSubmit}>Login</Button>
         </form>
+        </div>
         </div>
     )
 }

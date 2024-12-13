@@ -2,11 +2,12 @@ import { useLoaderData, useNavigation } from 'react-router-dom';
 import ImageHolder2 from '../../components/imageholder2/ImageHolder2';
 import PharmacyItemsDirectory from '../../components/pharmacy/PharmacyItemsDirectory';
 import './Directory.css';
-import LoadingSpinner from '../../../shared/components/UI/loadingspinner/LoadingSpinner';
+// import LoadingSpinner from '../../../shared/components/UI/loadingspinner/LoadingSpinner';
 import useOpenModal from '../../../shared/hooks/useOpenModal';
 import { useEffect } from 'react';
 import Modal from '../../../shared/components/UI/Modal/modal';
 import { path } from '../../../shared/utils/imagePath';
+import Skeleton from '../../../shared/components/skeleton/Skeleton';
 
 function Directory(){
     const navigation = useNavigation();
@@ -32,12 +33,14 @@ function Directory(){
 
     return (
         <>
-        {navigation.state === 'loading' && <LoadingSpinner asOverlay />}
+        {navigation.state === 'loading' && <Skeleton />}
         <ImageHolder2 />
+        <div className='wrapper'>
         <section className='pharmacies'>
             <h1>Pharmacy Directory.</h1>
             <PharmacyItemsDirectory />
          </section>
+         </div>
         </>
     )
 }

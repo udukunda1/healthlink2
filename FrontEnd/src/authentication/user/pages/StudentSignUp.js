@@ -64,6 +64,7 @@ function StudentSignUp(){
       }, [logData, openModal])
 
     return (
+        <div className='wrapper'>
         <div className="student-signup">
         <Modal  ref={modalRef}>
         <p className='message'>{logData.err}</p>
@@ -83,6 +84,7 @@ function StudentSignUp(){
             <input ref={confirmPassword} type="password" name="confirmPassword" id="confirmPassword" required />
             <Button type='submit' id="button" onClick={(event) => handleSubmit(event)} >SignUp</Button>
         </Form>
+        </div>
         </div>
     )
 }

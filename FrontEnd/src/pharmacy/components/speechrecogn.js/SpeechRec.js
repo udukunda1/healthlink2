@@ -15,8 +15,8 @@ const SpeechRec = ({setWord}) => {
     <div>
       {hasRecognitionSupport ? (
         <div>
-          {isListening ?( <MicOff onClick={stopListening} style={{ fontSize: 40, cursor: 'pointer' }} />):(<Mic onClick={startListening} style={{ fontSize: 40, cursor: 'pointer' }} />)}
-          {isListening && <div>Speak</div>}
+          {isListening ?( <MicOff className="microphone" onClick={stopListening} style={{ fontSize: 40, cursor: 'pointer' }} />):(<Mic className="microphone" onClick={startListening} style={{ fontSize: 40, cursor: 'pointer' }} />)}
+          {isListening && <div className="microphone">Speak</div>}
         {/* <h2>{text}</h2> */}
         {setWord(text)}
         </div>

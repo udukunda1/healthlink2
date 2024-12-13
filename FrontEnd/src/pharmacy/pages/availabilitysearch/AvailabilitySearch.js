@@ -2,11 +2,11 @@ import SearchableList from '../../components/search/SearcheableList';
 import './AvailabilitySearch.css';
 import SearchItem from '../../components/pharmacy/SearchItem';
 import { useLoaderData, useNavigation } from 'react-router-dom';
-import LoadingSpinner from '../../../shared/components/UI/loadingspinner/LoadingSpinner';
+// import LoadingSpinner from '../../../shared/components/UI/loadingspinner/LoadingSpinner';
 import { useEffect } from 'react';
 import useOpenModal from '../../../shared/hooks/useOpenModal';
 import Modal from '../../../shared/components/UI/Modal/modal';
-import SpeechRec from '../../components/speechrecogn.js/SpeechRec';
+import Skeleton from '../../../shared/components/skeleton/Skeleton';
 
 function AvailabilitySearch(){
   const response = useLoaderData();
@@ -33,13 +33,15 @@ function AvailabilitySearch(){
 
     return (
         <>
-        {navigation.state === 'loading' && <LoadingSpinner asOverlay />}
+        {navigation.state === 'loading' && <Skeleton />}
+        <div className='wrapper'>
         <div className='availability-search'>
         <h2>Check Availability</h2>
         <div>
         <SearchableList items={pharmacies} itemKeyFn={(item) => item.id}>
           {(item) => <SearchItem title={item.title} address={item.address} image={item.image} time={item.workingHours} meds={item.inventory.medicines.slice(0, 3)} id={item.id} />}
         </SearchableList>
+        </div>
         </div>
         </div>
         </>

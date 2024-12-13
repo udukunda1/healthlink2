@@ -12,6 +12,7 @@ import LoadingSpinner from '../../../shared/components/UI/loadingspinner/Loading
 import { useContext, useEffect, useRef, useState } from 'react';
 import { authContext } from '../../../shared/context/auth-context';
 import { path } from '../../../shared/utils/imagePath';
+import Skeleton from '../../../shared/components/skeleton/Skeleton';
 
 function PharmacyDetails() {
     const { pharmacy } = useLoaderData();
@@ -101,7 +102,7 @@ function PharmacyDetails() {
 
     return(
         <>
-        {navigation.state === 'loading' && <LoadingSpinner asOverlay />}
+        {navigation.state === 'loading' && <Skeleton />}
         {isLoading && <LoadingSpinner asOverlay />}
         <Modal  ref={myModalRef}>
         <h3>{logData.err === 'authentication failed'? 'You must Login first': logData.err}</h3>

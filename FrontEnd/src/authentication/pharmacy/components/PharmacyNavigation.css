@@ -2,7 +2,7 @@
 .pharmacy-navigation{
     /* background: blue; */
     width: 50%;
-    margin: 2rem 0;
+    padding: 2rem 0;
     display: flex;
     justify-content: space-evenly;
     margin-left: auto;

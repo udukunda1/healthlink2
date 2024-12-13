@@ -10,7 +10,7 @@ function PharmcyStudentReviewsItem({name, content, image}) {
         <div className='PharmcyStudentReviewsItem'>
             <div className="PharmcyStudentReviewsItem__heading">
                 <div className="PharmcyStudentReviewsItem__heading--image">
-                <img src={`${imagePath}${image}`} alt='img' />
+                <img src={`${imagePath}${image}`} alt='profileimage' />
                 </div>
                 <div className="PharmcyStudentReviewsItem__heading--name">
                     <p className='name'>{name}</p>

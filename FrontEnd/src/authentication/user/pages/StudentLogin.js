@@ -58,6 +58,7 @@ function StudentLogin(){
       }, [logData, openModal])
 
     return (
+        <div className='wrapper'>
         <div className="student-login">
         <Modal  ref={modalRef}>
         <p className='message'>{logData.err}</p>
@@ -71,6 +72,7 @@ function StudentLogin(){
             <input ref={pssRef} type="password" id="password" name="password" required />
             <Button type='submit' id="button" onClick={handleSubmit} >Login</Button>
         </form>
+        </div>
         </div>
     )
 }

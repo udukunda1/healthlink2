@@ -15,7 +15,7 @@ function PharmacyItem({title, content, image, id}) {
         >
             <Link to={`/directory/details/${id}`} >
             <div className='pharmacy-card__image'>
-                <img src={`${imagePath}${image}`} alt='img' />
+                <img src={`${imagePath}${image}`} alt={title + ' image'} />
             </div>
             <div className='pharmacy-card__content'>
                 <p className='title'>{title}</p>

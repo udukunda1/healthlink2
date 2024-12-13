@@ -7,7 +7,7 @@
     position: absolute;
     width: 71vw;
     height: 38vh;
-    top: 68vh;
+    top: 50vh;
     left: 14.5vw;
     border-radius: 17.78px;
     display: flex;
@@ -71,7 +71,7 @@
  }
 
 .home {
-    margin: 0 178px;
+    margin: 0 13.9vw;
 }
 
 .cta-findmedicine__button {

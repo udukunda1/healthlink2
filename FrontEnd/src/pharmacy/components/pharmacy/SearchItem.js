@@ -13,7 +13,7 @@ function SearchItem({title, address, image, time, meds, id}) {
          transition={{type: 'spring', stiffness: 500}}
          >
             <div className='search-item-card__image'>
-                <img src={`${imagePath}${image}`} alt='img' />
+                <img src={`${imagePath}${image}`} alt='click to view details' />
             </div>
             <div className='search-item-card__content'>
                 <h3>{title}</h3>

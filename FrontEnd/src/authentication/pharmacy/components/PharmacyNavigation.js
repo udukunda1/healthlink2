@@ -6,9 +6,11 @@ import './PharmacyNavigation.css';
 
 function PharmacyNavigation() {
     return (
+        <div className='wrapper'>
         <div className="pharmacy-navigation">
         <Link to='/authenticate/pharmacy/'><Button type='a' className="cta-white">login</Button></Link>
         <Link to='/authenticate/pharmacy/signup'><Button type='a' className="cta-white">Register</Button></Link>
+        </div>
         </div>
     )
 }

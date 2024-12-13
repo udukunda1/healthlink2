@@ -5,9 +5,11 @@ import './StudentNavigation.css';
 
 function StudentNavigation() {
     return (
+        <div className='wrapper'>
         <div className="student-navigation">
         <Link to='/authenticate/student/'><Button type='a' className="cta-white">login</Button></Link>
         <Link to='/authenticate/student/signup'><Button type='a' className="cta-white">Signup</Button></Link>
+        </div>
         </div>
     )
 }

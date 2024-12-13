@@ -1,0 +1,88 @@
+/* General Skeleton Styling */
+.skeleton {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  25% {
+    background-color: #a8a8a8;
+  }
+  50% {
+    background-color: #e0e0e0;
+  }
+  75% {
+    background-color: #a8a8a8;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+/* Skeleton Container */
+.skeleton-container {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 19;
+  top: 0;
+  left: 0;
+}
+
+/* Header Skeleton */
+
+.logo-skeleton {
+  width: 100px;
+  height: 20px;
+}
+
+
+.nav-item {
+  width: 80px;
+  height: 20px;
+}
+
+/* Hero Skeleton */
+.hero-skeleton {
+  height: 71vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e0e0;
+}
+
+.hero-text-skeleton {
+  width: 60%;
+  height: 50px;
+}
+
+/* Content Section Skeleton */
+.content-skeleton {
+  display: flex;
+  justify-content: space-around;
+  margin: 4rem 13.9vw;
+}
+
+[data-theme="dark"] {
+  .content-skeleton {
+    background: #3c3c3c;
+  }
+
+  .skeleton-container {
+  background: #3c3c3c;
+  }
+}
+
+.content-box {
+  width: 30%;
+  height: 120px;
+}
+

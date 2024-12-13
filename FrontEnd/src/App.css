@@ -2,13 +2,40 @@
     --dark-green: #0e4f1f;
 }
 
+body {
+    background: white;
+}
+
+
+[data-theme="light"] {
+    .wrapper {
+    background: white;
+}
+}
+
+
 [data-theme="dark"] {
     --dark-theme-1: #0F1214;
     --dark-theme-2: #212121;
     --dark-theme-3: #3c3c3c;
+    .microphone {
+        color: white;
+    }
 }
 
 
- body{
+body {
     background: var(--dark-theme-3);
+}
+
+.wrapper-for-contrast {
+    /* position: fixed; */
+    background: #0e4f1f;
+    height: 50vh;
+    width: 100vw;
+    z-index: 5000;
+}
+
+#root {
+    margin-top: 108px;
 }

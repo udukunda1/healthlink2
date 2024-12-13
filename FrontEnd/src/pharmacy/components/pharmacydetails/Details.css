@@ -5,8 +5,12 @@
 
 .datails-container .item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding-bottom: 16px;
+}
+
+.datails-container span {
+    padding-right: 8px;
 }
 
 .datails-container .item img {

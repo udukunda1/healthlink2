@@ -11,7 +11,7 @@ function StudentExperienceItems(){
     let reviews = [
          {
           image: obed,
-          name: 'Abiragiye Obed',
+          name: 'Iradukunda Emmy',
           content: '"finally i can find medicine i need without running arround"'
          },
          {

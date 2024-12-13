@@ -6,7 +6,7 @@ import Modal from '../UI/Modal/modal';
 import useOpenModal from '../../hooks/useOpenModal';
 import FavoutiteCard from '../favouritecard/FavoutiteCard';
 import { path } from '../../utils/imagePath';
-
+import ReactDOM from 'react-dom'; // Import ReactDOM for createPortal
 
 function FavouriteIcon() {
     const [logData, setLogData] = useState({favourite: []});
@@ -17,7 +17,6 @@ function FavouriteIcon() {
         async function getFav(){
             if(auth.isLoggedIn){
                 try{
-
                     const response = await fetch(`${path}/users/favourite`, {
                         headers: {
                             'Content-Type': 'application/json',
@@ -31,34 +30,46 @@ function FavouriteIcon() {
                         return;
                     }
                     setLogData(resData);
-
-                    }
-                    catch {
-                        console.log('failed');
-                    }
+                }
+                catch {
+                    console.log('failed');
+                }
             }
         }
 
         getFav();
+    }, [auth.isLoggedIn]);
 
-    }, [auth.isLoggedIn])
-
-    return(
-        <>
+    // Modal content that will be rendered inside its current container
+    const modalContent = (
         <Modal ref={modalRef}>
             <div className='favourite-modal'>
-            {auth.isLoggedIn && logData.favourite.length !== 0 && <h3>favourites</h3>}
-            <h3>{!auth.isLoggedIn && 'Your favorite pharmacy is missing. Log in to add it now!'}</h3>
-            {auth.isLoggedIn && logData.favourite.length !== 0 && <>{logData.favourite.map(pharma => <FavoutiteCard name={pharma.title} image={pharma.image} id={pharma.id} key={pharma.id} />)}</> }
-            {auth.isLoggedIn && logData.favourite.length === 0 && <h3>No favorite pharmacy selected. Choose one today!</h3>}
+                {auth.isLoggedIn && logData.favourite.length !== 0 && <h3>favourites</h3>}
+                <h3>{!auth.isLoggedIn && 'Your favorite pharmacy is missing. Log in to add it now!'}</h3>
+                {auth.isLoggedIn && logData.favourite.length !== 0 &&
+                    <>{logData.favourite.map(pharma => <FavoutiteCard name={pharma.title} image={pharma.image} id={pharma.id} key={pharma.id} />)}</>}
+                {auth.isLoggedIn && logData.favourite.length === 0 && <h3>No favorite pharmacy selected. Choose one today!</h3>}
             </div>
         </Modal>
+    );
+
+    // Render Favourite Icon using createPortal
+    const favouriteIcon = (
         <div className='favourite-icon' onClick={openModal}>
-        <h1><MdOutlineFavorite /></h1>
-        <p>{logData.favourite.length}</p>
+            <h1><MdOutlineFavorite /></h1>
+            <p>{logData.favourite.length}</p>
         </div>
+    );
+
+    return (
+        <>
+            {/* Render the Modal in the original container */}
+            {modalContent}
+
+            {/* Render the Favourite Icon outside the container using createPortal */}
+            {ReactDOM.createPortal(favouriteIcon, document.body)}
         </>
-    )
+    );
 }
 
 export default FavouriteIcon;

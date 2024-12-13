@@ -75,6 +75,7 @@ function PharmacySignUp(){
 
     return (
         <>
+        <div className='wrapper'>
         <div className="pharmacy-signup">
         {isLoading && <LoadingSpinner asOverlay />}
         <Modal  ref={modalRef}>
@@ -102,6 +103,7 @@ function PharmacySignUp(){
             <input type="number" ref={codeRef} id="code" required />
             <Button type='submit' id="button" onClick={(event) => handleRegister(event)}>Register</Button>
         </form>
+        </div>
         </div>
         </>
     )

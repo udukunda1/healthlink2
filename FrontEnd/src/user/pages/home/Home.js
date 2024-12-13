@@ -7,8 +7,8 @@ import StudentExperience from '../../components/studentexperience/StudentExperie
 import PharmacyItemsHome from '../../../pharmacy/components/pharmacy/PharmacyItemsHome';
 import Modal from '../../../shared/components/UI/Modal/modal';
 import useOpenModal from '../../../shared/hooks/useOpenModal';
-import { Suspense, useEffect } from 'react';
-import LoadingSpinner from '../../../shared/components/UI/loadingspinner/LoadingSpinner';
+import { Suspense, useContext, useEffect } from 'react';
+// import LoadingSpinner from '../../../shared/components/UI/loadingspinner/LoadingSpinner';
 import { path } from '../../../shared/utils/imagePath';
 import siren from '../../../image/Siren.svg';
 import call from '../../../image/call.svg';
@@ -16,11 +16,14 @@ import arrow from '../../../image/arrow.svg';
 import add from '../../../image/add.svg';
 import com from '../../../image/com.svg';
 import HomeLoader from '../../../shared/components/UI/homeloader/HomeLoader';
+import Skeleton from '../../../shared/components/skeleton/Skeleton';
+import {authContext} from '../../../shared/context/auth-context'
 
 function Home() {
   const response = useLoaderData();
   const navigation = useNavigation();
   const [modalRef, openModal] = useOpenModal();
+  const auth = useContext(authContext);
 
   useEffect(() => {
     if(response.error){
@@ -40,10 +43,11 @@ function Home() {
   }
 
    return (
-      <>
-      {navigation.state === 'loading' && <LoadingSpinner asOverlay />}
+      <div className='wrapper'>
+      {navigation.state === 'loading' && <Skeleton />}
+      {/* <Skeleton /> */}
       <ImageHolder />
-      <div className='actions'>
+        <div className='actions'>
         <div className='item one'>
           <div className='content'>
           <img src={siren} alt='siren' />
@@ -71,11 +75,11 @@ function Home() {
               today and make a difference!
             </p>
             <div  className='button'>
-            <Link to='/authenticate/pharmacy/signup'><Button type='a' className='cta-white white'>Register <img src={arrow} alt='arrow' /> </Button></Link>
+            {!auth.isLoggedIn && <Link to='/authenticate/pharmacy/signup'><Button type='a' className='cta-white white'>Register <img src={arrow} alt='arrow' /> </Button></Link>}
             </div>
           </div>
         </div>
-        <div className='item three'>
+        {!auth.isLoggedIn && <div className='item three'>
         <div className='content'>
         <img src={com} alt='siren' />
           <p>Join Community</p>
@@ -90,7 +94,19 @@ function Home() {
             <Link to='/authenticate/student/signup'><Button type='a' className='cta-white white'>Join <img src={arrow} alt='arrow' /> </Button></Link>
             </div>
           </div>
-        </div>
+        </div>}
+        {auth.isLoggedIn && <div className='item three'>
+        <div className='content'>
+        <img src={com} alt='siren' />
+          <p>Joined Community</p>
+          </div>
+          <div className='content2'>
+            <p>
+             Welcome back, {auth.isLoggedIn.name}! you are among us
+             Let's find medicines and pharmacies conveniently.
+            </p>
+          </div>
+        </div>}
       </div>
       <div className='home'>
 
@@ -113,7 +129,7 @@ function Home() {
         </div>
       </section>
       </div>
-      </>
+      </div>
     );
 }
 
