@@ -1,0 +1,2 @@
+a site that put together all pharmacies that are covered by student insurance and 
+make them avairable for student to locate and view inventory.

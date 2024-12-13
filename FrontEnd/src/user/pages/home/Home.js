@@ -18,6 +18,8 @@ import com from '../../../image/com.svg';
 import HomeLoader from '../../../shared/components/UI/homeloader/HomeLoader';
 import Skeleton from '../../../shared/components/skeleton/Skeleton';
 import {authContext} from '../../../shared/context/auth-context'
+import SlideContrast from '../../../shared/components/slider/SlideContrast';
+
 
 function Home() {
   const response = useLoaderData();
@@ -47,6 +49,7 @@ function Home() {
       {navigation.state === 'loading' && <Skeleton />}
       {/* <Skeleton /> */}
       <ImageHolder />
+      <div style={{visibility: 'hidden'}}><SlideContrast sidedrawer='' /></div>
         <div className='actions'>
         <div className='item one'>
           <div className='content'>

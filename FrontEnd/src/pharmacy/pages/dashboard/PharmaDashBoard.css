@@ -3,6 +3,7 @@
     width: 100vw;
     position: fixed;
     z-index: -1;
+    margin: -108px 0;
 }
 
 .pharma-dashboard__header {
@@ -14,10 +15,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 0;
+    left: 0;
 }
 
 .pharma-dashboard__content {
-    padding-top: 15vh ;
+    padding-top: 1vh ;
     padding-bottom: 5vh;
     width: 100%;
     display: flex;

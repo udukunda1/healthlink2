@@ -9,6 +9,7 @@ import size from '../../../image/sidedrawer/Font Style Formatting.svg';
 import language from '../../../image/sidedrawer/Google Translate.svg';
 import privacy from '../../../image/sidedrawer/Privacy.svg';
 import terms from '../../../image/sidedrawer/Terms and Conditions.svg';
+import sun from '../../../image/Sun.svg';
 import DarkMode from "../UI/DarkMode/DarkMode";
 import Slide from '../slider/Slide';
 import SlideContrast from "../slider/SlideContrast";
@@ -35,7 +36,7 @@ const RightDrawer = () => {
     <h3 style={{fontSize: '17px'}}> <img src={settin} alt="health link settings" />Settings</h3>
     <h3><img src={moon} alt="settin" />Dark Mode <DarkMode /></h3>
     <h3><img src={size} alt="settin" />Font Size <Slide /></h3>
-    <h3><img src={size} alt="settin" />Brightness <SlideContrast /></h3>
+    <h3><img src={sun} alt="settin" />Brightness <SlideContrast /></h3>
     <h3><img src={language} alt="settin" />Language </h3>
     <h3><img src={privacy} alt="settin" />Privacy Policy</h3>
     <h3><img src={terms} alt="settin" />Terms and Conditions</h3>
