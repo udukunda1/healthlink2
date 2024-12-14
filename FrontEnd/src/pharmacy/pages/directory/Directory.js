@@ -6,7 +6,6 @@ import './Directory.css';
 import useOpenModal from '../../../shared/hooks/useOpenModal';
 import { useContext, useEffect } from 'react';
 import Modal from '../../../shared/components/UI/Modal/modal';
-import { path } from '../../../shared/utils/imagePath';
 import Skeleton from '../../../shared/components/skeleton/Skeleton';
 import LanguageContext from '../../../shared/context/LanguageContext';
 
@@ -51,7 +50,7 @@ export default Directory;
 
 export async function dloader() {
   try{
-    const response = await fetch(`${path}/pharma`);
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/pharma`);
   if(!response.ok){
     return {error: true, message: 'failed to fetch from server'}
   }

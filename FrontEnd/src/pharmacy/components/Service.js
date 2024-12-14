@@ -3,7 +3,6 @@ import './Med.css';
 import { pharmaAuthContext } from '../../shared/context/pharma-auth-context';
 import { useLocation, useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../../shared/components/UI/loadingspinner/LoadingSpinner';
-import { path } from '../../shared/utils/imagePath';
 
 function Service({service}){
     const auth = useContext(pharmaAuthContext);
@@ -16,7 +15,7 @@ function Service({service}){
         async function Remove(){
             try{
                 setIsLoading(true)
-            const response = await fetch(`${path}/pharma/service`,{
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/pharma/service`,{
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

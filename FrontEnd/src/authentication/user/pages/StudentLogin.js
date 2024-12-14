@@ -6,7 +6,6 @@ import { authContext } from '../../../shared/context/auth-context';
 import { useNavigate } from 'react-router-dom';
 import useOpenModal from '../../../shared/hooks/useOpenModal';
 import Modal from '../../../shared/components/UI/Modal/modal';
-import { path } from '../../../shared/utils/imagePath';
 import LanguageContext from '../../../shared/context/LanguageContext';
 
 function StudentLogin(){
@@ -26,7 +25,7 @@ function StudentLogin(){
         async function loginData(){
             try{
                 setIsLoading(true);
-            const response = await fetch(`${path}/users/login`,{
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/users/login`,{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

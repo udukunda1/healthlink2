@@ -7,7 +7,6 @@ import LoadingSpinner from '../../../shared/components/UI/loadingspinner/Loading
 
 import Button from "../../../shared/components/UI/Button/Button";
 import './PharmacyLogin.css';
-import { path } from '../../../shared/utils/imagePath';
 import LanguageContext from '../../../shared/context/LanguageContext';
 
 function PharmacyLogin(){
@@ -27,7 +26,7 @@ function PharmacyLogin(){
         async function loginData(){
             try{
                 setIsLoading(true);
-            const response = await fetch(`${path}/pharma/login`,{
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/pharma/login`,{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

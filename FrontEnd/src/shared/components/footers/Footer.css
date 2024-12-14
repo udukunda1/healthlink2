@@ -6,6 +6,11 @@
 
 }
 
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
 [data-theme="dark"] {
     .footer {
         background: var(--dark-theme-1);

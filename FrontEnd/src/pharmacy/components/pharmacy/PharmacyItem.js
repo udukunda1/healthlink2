@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import './PharmacyItem.css';
 import { motion } from 'framer-motion';
-import { imagePath } from '../../../shared/utils/imagePath';
-
 
 function PharmacyItem({title, content, image, id}) {
 
@@ -15,7 +13,7 @@ function PharmacyItem({title, content, image, id}) {
         >
             <Link to={`/directory/details/${id}`} >
             <div className='pharmacy-card__image'>
-                <img src={`${imagePath}${image}`} alt={title + ' image'} />
+                <img src={`${process.env.REACT_APP_API_URL}/uploads/images/${image}`} alt={title + ' image'} />
             </div>
             <div className='pharmacy-card__content'>
                 <p className='title'>{title}</p>

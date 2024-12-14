@@ -8,7 +8,6 @@ import { pharmaAuthContext } from '../../../shared/context/pharma-auth-context';
 import Modal from '../../../shared/components/UI/Modal/modal';
 import useOpenModal from '../../../shared/hooks/useOpenModal';
 import LoadingSpinner from '../../../shared/components/UI/loadingspinner/LoadingSpinner';
-import { imagePath, path } from '../../../shared/utils/imagePath';
 import { createPortal } from 'react-dom';
 
 function PharmaDashBoard() {
@@ -33,7 +32,7 @@ function PharmaDashBoard() {
         async function Add() {
             try {
                 setIsLoading(true);
-                const response = await fetch(`${path}/pharma/medicine`, {
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/pharma/medicine`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -66,7 +65,7 @@ function PharmaDashBoard() {
         async function AddService() {
             try {
                 setIsLoading(true);
-                const response = await fetch(`${path}/pharma/service`, {
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/pharma/service`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -105,7 +104,7 @@ function PharmaDashBoard() {
             <div
                 className='pharma-dashboard'
                 style={{
-                    backgroundImage: `url(${imagePath}${pharmacy.image})`,
+                    backgroundImage: `url(${process.env.REACT_APP_API_URL}/uploads/images/${pharmacy.image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}
@@ -170,6 +169,6 @@ export default PharmaDashBoard;
 
 export async function dashboardloader({ params }) {
     const id = params.pharmaId;
-    const response = await fetch(`${path}/pharma/${id}`);
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/pharma/${id}`);
     return response;
 }

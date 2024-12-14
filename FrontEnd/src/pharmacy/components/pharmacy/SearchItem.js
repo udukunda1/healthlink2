@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import './SearchItem.css';
 import { MdMedication } from 'react-icons/md';
 import { motion } from 'framer-motion';
-import { imagePath } from '../../../shared/utils/imagePath';
 import { useContext } from 'react';
 import LanguageContext from '../../../shared/context/LanguageContext';
 
@@ -16,7 +15,7 @@ function SearchItem({title, address, image, time, meds, id}) {
          transition={{type: 'spring', stiffness: 500}}
          >
             <div className='search-item-card__image'>
-                <img src={`${imagePath}${image}`} alt='click to view details' />
+                <img src={`${process.env.REACT_APP_API_URL}/uploads/images/${image}`} alt='click to view details' />
             </div>
             <div className='search-item-card__content'>
                 <h3>{title}</h3>

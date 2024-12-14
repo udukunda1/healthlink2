@@ -6,7 +6,6 @@ import { authContext } from "../../../shared/context/auth-context";
 import useOpenModal from "../../../shared/hooks/useOpenModal";
 import Modal from "../../../shared/components/UI/Modal/modal";
 import LoadingSpinner from "../../../shared/components/UI/loadingspinner/LoadingSpinner";
-import { path } from "../../../shared/utils/imagePath";
 import LanguageContext from "../../../shared/context/LanguageContext";
 
 function StudentSignUp(){
@@ -35,7 +34,7 @@ function StudentSignUp(){
                 formData.append('password', password.current.value);
                 formData.append('confirmPassword', confirmPassword.current.value);
                 setIsLoading(true);
-            const response = await fetch(`${path}/users/signup`,{
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/users/signup`,{
                 method: 'POST',
                 body: formData
             })

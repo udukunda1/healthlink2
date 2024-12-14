@@ -3,7 +3,6 @@ import './Med.css';
 import { pharmaAuthContext } from '../../shared/context/pharma-auth-context';
 import { useLocation, useNavigate } from 'react-router-dom';
 import LoadingSpinner from '../../shared/components/UI/loadingspinner/LoadingSpinner';
-import { path } from '../../shared/utils/imagePath';
 
 
 function Med({name}){
@@ -17,7 +16,7 @@ function Med({name}){
         async function Remove(){
             try{
                 setIsLoading(true)
-            const response = await fetch(`${path}/pharma/medicine`,{
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/pharma/medicine`,{
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

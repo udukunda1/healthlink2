@@ -5,7 +5,6 @@ import { authContext } from '../../context/auth-context';
 import Modal from '../UI/Modal/modal';
 import useOpenModal from '../../hooks/useOpenModal';
 import FavoutiteCard from '../favouritecard/FavoutiteCard';
-import { path } from '../../utils/imagePath';
 import ReactDOM from 'react-dom'; // Import ReactDOM for createPortal
 import LanguageContext from '../../context/LanguageContext';
 
@@ -20,7 +19,7 @@ function FavouriteIcon() {
         async function getFav(){
             if(auth.isLoggedIn){
                 try{
-                    const response = await fetch(`${path}/users/favourite`, {
+                    const response = await fetch(`${process.env.REACT_APP_API_URL}/users/favourite`, {
                         headers: {
                             'Content-Type': 'application/json',
                             'Authorization': 'Bearer ' + auth.isLoggedIn.token

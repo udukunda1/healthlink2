@@ -11,7 +11,6 @@ import useOpenModal from '../../../shared/hooks/useOpenModal';
 import LoadingSpinner from '../../../shared/components/UI/loadingspinner/LoadingSpinner';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { authContext } from '../../../shared/context/auth-context';
-import { path } from '../../../shared/utils/imagePath';
 import Skeleton from '../../../shared/components/skeleton/Skeleton';
 import LanguageContext from '../../../shared/context/LanguageContext';
 
@@ -35,7 +34,7 @@ function PharmacyDetails() {
         async function Rate(){
             try{
                 setIsLoading(true);
-            const response = await fetch(`${path}/users/rate/${pharmacyId}`,{
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/users/rate/${pharmacyId}`,{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -68,7 +67,7 @@ function PharmacyDetails() {
         async function Add(){
             try{
                 setIsLoading(true);
-            const response = await fetch(`${path}/users/favourite/${pharmacyId}`,{
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/users/favourite/${pharmacyId}`,{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -164,7 +163,7 @@ export default PharmacyDetails;
 
 export async function ploader({params}) {
     const id = params.pharmacyId;
-    const response = await fetch( `${path}/pharma/${id}`);
+    const response = await fetch( `${process.env.REACT_APP_API_URL}/pharma/${id}`);
 
     return response;
   }

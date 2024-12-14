@@ -8,8 +8,6 @@ import PharmacyItemsHome from '../../../pharmacy/components/pharmacy/PharmacyIte
 import Modal from '../../../shared/components/UI/Modal/modal';
 import useOpenModal from '../../../shared/hooks/useOpenModal';
 import { Suspense, useContext, useEffect } from 'react';
-// import LoadingSpinner from '../../../shared/components/UI/loadingspinner/LoadingSpinner';
-import { path } from '../../../shared/utils/imagePath';
 import siren from '../../../image/Siren.svg';
 import call from '../../../image/call.svg';
 import arrow from '../../../image/arrow.svg';
@@ -133,7 +131,8 @@ export default Home;
 
 async function loadpharma() {
   try{
-    const response = await fetch(`${path}/pharma`);
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/pharma`);
+    // console.log(process.env.REACT_APP_API_URL);
   if(!response.ok){
     return {error: true, message: 'failed to fetch from server'}
   }

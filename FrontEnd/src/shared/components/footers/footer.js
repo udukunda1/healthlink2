@@ -6,6 +6,7 @@ import ig from '../../../image/ig.svg';
 import yt from '../../../image/youtube.svg';
 import { useContext } from 'react';
 import LanguageContext from '../../context/LanguageContext';
+import { Link } from 'react-router-dom';
 
 
 function Footer() {
@@ -22,17 +23,17 @@ function Footer() {
                     </div>
                     <div className='inner__one--two'>
                     <p className='header'>{translations.footer.quickLinks.header}</p>
-                        <p>{translations.footer.quickLinks.home}</p>
-                        <p>{translations.footer.quickLinks.directory}</p>
-                        <p>{translations.footer.quickLinks.search}</p>
-                        <p>{translations.footer.quickLinks.getStarted}</p>
+                        <Link to='/'>{translations.footer.quickLinks.home}</Link>
+                        <Link to='/directory'>{translations.footer.quickLinks.directory}</Link>
+                        <Link to='/search'>{translations.footer.quickLinks.search}</Link>
+                        <Link to='/authenticate/student/signup'>{translations.footer.quickLinks.getStarted}</Link>
                     </div>
                     <div className='inner__one--three'>
                     <p className='header'>{translations.footer.specialities.header}</p>
-                        <p>{translations.footer.specialities.anesthesiology}</p>
-                        <p>{translations.footer.specialities.generalSurgery}</p>
-                        <p>{translations.footer.specialities.psychiatry}</p>
-                        <p>{translations.footer.specialities.familyMedicine}</p>
+                        <Link to='/directory'>{translations.footer.specialities.anesthesiology}</Link>
+                        <Link to='/directory'>{translations.footer.specialities.generalSurgery}</Link>
+                        <Link to='/directory'>{translations.footer.specialities.psychiatry}</Link>
+                        <Link to='/directory'>{translations.footer.specialities.familyMedicine}</Link>
                     </div>
                     <div className='inner__one--four'>
                     <p className='header'>{translations.footer.socialMedia}</p>
