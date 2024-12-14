@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 
-export default function SlideContrast({sidedrawer}) {
+export default function SlideContrast({sidedrawer, skeleton}) {
   // Retrieve saved font size value from localStorage or default to 0 (Small)
   const savedValue = localStorage.getItem('contrastValue') || '100';
   const [val, setVal] = React.useState(Number(savedValue));
@@ -27,6 +27,7 @@ export default function SlideContrast({sidedrawer}) {
     if(sidedrawer !== ''){
       document.querySelector('.MuiDrawer-paper').style.filter = `brightness(${contrast}%)`;
     }
+
     document.getElementById('root').style.filter = `brightness(${contrast}%)`;
     document.querySelector('.navbar').style.filter = `brightness(${contrast}%)`;
     document.querySelector('.favourite-icon').style.filter = `brightness(${contrast}%)`;
