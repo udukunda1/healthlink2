@@ -1,0 +1,53 @@
+{
+    "home": "Ahabanza",
+    "pharmacyDirectory": "Farumasi",
+    "medSearch": "Shaka",
+    "login": "Injira",
+    "logout": "Sohoka",
+    "signup": "Iyandikishe",
+    "interactWithOthers": "Kwifatanya n’abandi",
+    "welcomeBack": "Ikaze",
+    "reminderToCheck": "Reba igihe",
+        "emergencyCases": "Ibikorwa byihutirwa",
+        "emergencyCallDescription": "Hamagara umurongo wacu wihariye kugira ngo ubone ubufasha bwihuse igihe buri segonda ari ingenzi.",
+        "registerPharmacy": "Andikisha farumasi",
+        "registerPharmacyDescription": "Tukorane kugira ngo wagure aho ugera kandi ufashe abantu kubona serivisi zawe.",
+        "joinCommunity": "Jya mu muryango",
+        "joinCommunityDescription": "Ba umwe mu muryango wacu uhuza abantu na serivisi z’ubuzima.",
+        "joinedCommunity": "Winjiye mu muryango",
+        "joinedCommunityDescription": "Ikaze, {{name}}! Reka dushake imiti na farumasi mu buryo bworoshye.",
+        "ctaText": "Witeguye gutangira? Jya mu muryango wacu kandi koroshya gushaka imiti!",
+        "featuredPharmacies": "Farumasi zihariye",
+        "seeMore": "Reba byinshi",
+        "register": "Iyandikishe",
+        "join": "Injira",
+        "getStarted": "Tangira",
+        "studentSuccessStories": "Inkuru z'Ubuhamya bw'Abanyeshuri",
+        "header": {
+            "title": "Banza Urebe!",
+            "content": "Emeza mbere yo kugenda! Dutanga umurongo wizewe hagati y'abanyeshuri n'ibikoresho by'ubuzima."
+         },
+         "footer": {
+            "contact": "Aho Mutubariza",
+            "phone": "+250790417504",
+            "email": "rumpatr048@gmail.com",
+            "quickLinks": {
+            "header": "Inzira z'ihuse",
+            "home": "Ahabanza",
+            "directory": "Urutonde",
+            "search": "Shakisha",
+            "getStarted": "Tangira"
+            },
+            "specialities": {
+            "header": "Ibimenyetso Byihariye",
+            "anesthesiology": "Ubujyanama ",
+            "generalSurgery": "Kubagwa",
+            "psychiatry": "Ubuvuzi bwo mu mutwe",
+            "familyMedicine": "umuryango"
+            },
+            "socialMedia": "Imbuga Nkoranyambaga",
+            "copyright": "© 2024 HealthLink. Uburenganzira bwose burabitswe.",
+            "termsAndConditions": "Amabwiriza n'ibisabwa",
+            "privacyPolicy": "Politiki y'ibanga"
+        }
+}

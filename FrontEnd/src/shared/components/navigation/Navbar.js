@@ -7,10 +7,12 @@ import logo from '../../../image/logo.svg';
 import './Navbar.css';
 import SideDrawer from '../sidedrawer/SideDrawer';
 import ReactDOM from 'react-dom';
+import LanguageContext from '../../context/LanguageContext';
 
 function Navbar() {
     const auth = useContext(authContext);
     const navigate = useNavigate();
+    const { translations } = useContext(LanguageContext);
 
     function handleLogout() {
         auth.logout();
@@ -23,9 +25,9 @@ function Navbar() {
             {!auth.isLoggedIn && (
                 <div className='uphead'>
                     <p>
-                        interact with others on Pharmacy discovery{' '}
+                        {translations.interactWithOthers}{' '}
                         <Link to='/authenticate/student/signup' style={{ color: 'white' }}>
-                            signup
+                            {translations.signup}
                         </Link>
                     </p>
                 </div>
@@ -33,9 +35,12 @@ function Navbar() {
             {auth.isLoggedIn && (
                 <div className='uphead'>
                     <p>
-                        Welcome back, {auth.isLoggedIn.name.split(' ')[auth.isLoggedIn.name.split(' ').length - 1].toUpperCase()}!{' '}
+                        {translations.welcomeBack},{' '}
+                        {auth.isLoggedIn.name
+                            .split(' ')
+                            [auth.isLoggedIn.name.split(' ').length - 1].toUpperCase()}{' '}
                         <span style={{ color: 'white', marginLeft: '12px' }}>
-                            Remember to check medicine expiry dates.
+                            {translations.reminderToCheck}
                         </span>
                     </p>
                 </div>
@@ -49,34 +54,37 @@ function Navbar() {
                     </NavLink>
                     {auth.isLoggedIn && (
                         <li className="nav-list__user">
-                            <FaUserCircle /> {auth.isLoggedIn.name.split(' ')[auth.isLoggedIn.name.split(' ').length - 1].toUpperCase()}
+                            <FaUserCircle />{' '}
+                            {auth.isLoggedIn.name
+                                .split(' ')
+                                [auth.isLoggedIn.name.split(' ').length - 1].toUpperCase()}
                         </li>
                     )}
                     <div className='nav-lists__links'>
                         <li className="nav-list">
                             <NavLink to="/" className={({ isActive }) => (isActive ? 'link active' : 'link')} end>
-                                Home
+                                {translations.home}
                             </NavLink>
                         </li>
                         <li className="nav-list">
                             <NavLink to="/directory" className={({ isActive }) => (isActive ? 'link active' : 'link')}>
-                                Pharmacy directory
+                                {translations.pharmacyDirectory}
                             </NavLink>
                         </li>
                         <li className="nav-list">
                             <NavLink to="/search" className={({ isActive }) => (isActive ? 'link active' : 'link')}>
-                                Med availability Search
+                                {translations.medSearch}
                             </NavLink>
                         </li>
                         {!auth.isLoggedIn ? (
                             <li className="nav-list">
                                 <Link to="/authenticate/student/">
-                                    <Button>Login</Button>
+                                    <Button>{translations.login}</Button>
                                 </Link>
                             </li>
                         ) : (
                             <Button type='a' className='cta-white' onClick={handleLogout}>
-                                Logout
+                                {translations.logout}
                             </Button>
                         )}
                         <SideDrawer />
@@ -86,7 +94,7 @@ function Navbar() {
         </div>
     );
 
-    return ReactDOM.createPortal(navbarContent, document.body); // This moves the navbar to the body
+    return ReactDOM.createPortal(navbarContent, document.body);
 }
 
 export default Navbar;

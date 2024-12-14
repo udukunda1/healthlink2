@@ -1,13 +1,15 @@
+import { useContext } from 'react';
 import './ImageHolder1.css';
+import LanguageContext from '../../../shared/context/LanguageContext';
 
 function Header() {
+    const { translations } = useContext(LanguageContext);
     return (
         <>
         <div className="img__bg">
             <div className="img__bg--item">
-            <h2 className="img__bg--item-title">Make Sure!</h2>
-            <p className='img__bg--item-content'>verify before you go! suggest a reliable link
-                 between students and health resources.
+            <h2 className="img__bg--item-title">{translations.header.title}</h2>
+            <p className='img__bg--item-content'>{translations.header.content}
             </p>
             </div>
         </div>

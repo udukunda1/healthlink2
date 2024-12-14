@@ -1,0 +1,53 @@
+{
+    "home": "Accueil",
+    "pharmacyDirectory": "Annuaire",
+    "medSearch": "Recherche",
+    "login": "Connexion",
+    "logout": "Sortir",
+    "signup": "Inscrire",
+    "interactWithOthers": "Rejoignez-nous",
+    "welcomeBack": "Bienvenue",
+    "reminderToCheck": "Vérifiez dates",
+        "emergencyCases": "Cas d'urgence",
+        "emergencyCallDescription": "Appelez notre ligne dédiée pour une assistance immédiate lorsque chaque seconde compte.",
+        "registerPharmacy": "Enregistrer une pharmacie",
+        "registerPharmacyDescription": "Collaborez avec nous pour élargir votre portée et aider la communauté à accéder à vos services.",
+        "joinCommunity": "Rejoindre la communauté",
+        "joinCommunityDescription": "Faites partie d'un réseau croissant qui connecte les individus aux services de santé essentiels.",
+        "joinedCommunity": "Communauté rejointe",
+        "joinedCommunityDescription": "Bienvenue, {{name}} ! Trouvons des médicaments et des pharmacies facilement.",
+        "ctaText": "Prêt à commencer ? Rejoignez notre communauté et facilitez la recherche de médicaments !",
+        "featuredPharmacies": "Pharmacies en vedette",
+        "seeMore": "Voir plus",
+        "register": "Enregistrer",
+        "join": "Rejoindre",
+        "getStarted": "Commencer",
+        "studentSuccessStories": "Histoires de réussite des étudiants",
+        "header": {
+            "title": "Assurez-vous!",
+            "content": "Vérifiez avant de partir! Suggérez un lien fiable entre les étudiants et les ressources de santé."
+          },
+        "footer": {
+            "contact": "Contact",
+            "phone": "+250790417504",
+            "email": "rumpatr048@gmail.com",
+            "quickLinks": {
+            "header": "Liens Rapides",
+            "home": "Accueil",
+            "directory": "Annuaire",
+            "search": "Rechercher",
+            "getStarted": "Commencer"
+            },
+            "specialities": {
+            "header": "Spécialités",
+            "anesthesiology": "Anesthésiologie",
+            "generalSurgery": "Chirurgie générale",
+            "psychiatry": "Psychiatrie",
+            "familyMedicine": "Médecine familiale"
+            },
+            "socialMedia": "Réseaux Sociaux",
+            "copyright": "© 2024 HealthLink. Tous droits réservés.",
+            "termsAndConditions": "Termes et conditions",
+            "privacyPolicy": "Politique de confidentialité"
+        }
+}

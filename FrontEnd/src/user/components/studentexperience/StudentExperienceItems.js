@@ -5,7 +5,6 @@ import cynthia from '../../../image/cynthia.jpeg';
 import silas from  '../../../image/silas.jpeg';
 import StudentExperienceItem from "./StudentExperienceItem";
 
-
 function StudentExperienceItems(){
 
     let reviews = [

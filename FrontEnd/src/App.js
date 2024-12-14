@@ -17,6 +17,7 @@ import PharmacyLogin from './authentication/pharmacy/pages/PharmacyLogin';
 import PharmacySignUp from './authentication/pharmacy/pages/PharmacySignUp';
 import ContextProvider from './shared/context/auth-context';
 import PharmaContextProvider from './shared/context/pharma-auth-context';
+import { LanguageProvider } from './shared/context/LanguageContext';
 
 const router = createBrowserRouter([
   {
@@ -63,13 +64,13 @@ function App() {
 
 
   return (
-    <>
+    <LanguageProvider>
     <PharmaContextProvider>
     <ContextProvider>
     <RouterProvider router={router} />
     </ContextProvider>
     </PharmaContextProvider>
-  </>
+  </LanguageProvider>
   )
 }
 

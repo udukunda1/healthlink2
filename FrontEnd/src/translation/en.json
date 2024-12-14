@@ -1,0 +1,54 @@
+{
+    "home": "Home",
+    "pharmacyDirectory": "Pharmacy Directory",
+    "medSearch": "Med Availability Search",
+    "login": "Login",
+    "logout": "Logout",
+    "signup": "Signup",
+    "interactWithOthers": "Interact with others on Pharmacy discovery",
+    "welcomeBack": "Welcome back",
+    "reminderToCheck": "Remember to check medicine expiry dates",
+        "emergencyCases": "Emergency cases",
+        "emergencyCallDescription": "Call our dedicated line for immediate assistance when every second counts.",
+        "registerPharmacy": "Register Pharmacy",
+        "registerPharmacyDescription": "Partner with us to expand your reach and help the community access your services.",
+        "joinCommunity": "Join Community",
+        "joinCommunityDescription": "Be part of a growing network that connects individuals to essential healthcare services.",
+        "joinedCommunity": "Joined Community",
+        "joinedCommunityDescription": "Welcome back,",
+        "joinedCommunityDescription2": "! Let's find medicines and pharmacies conveniently.",
+        "ctaText": "Ready to get started? Join our community and make finding medication stress-free!",
+        "featuredPharmacies": "Featured Pharmacies",
+        "seeMore": "See More",
+        "register": "Register",
+        "join": "Join",
+        "getStarted": "Get Started",
+        "studentSuccessStories": "Student Success Stories",
+        "header": {
+            "title": "Make Sure!",
+            "content": "Verify before you go! Suggest a reliable link between students and health resources."
+            },
+        "footer": {
+            "contact": "Contact",
+            "phone": "+250790417504",
+            "email": "rumpatr048@gmail.com",
+            "quickLinks": {
+            "header": "Quick Links",
+            "home": "Home",
+            "directory": "Directory",
+            "search": "Search",
+            "getStarted": "Get Started"
+            },
+            "specialities": {
+            "header": "Specialities",
+            "anesthesiology": "Anesthesiology",
+            "generalSurgery": "General surgery",
+            "psychiatry": "Psychiatry",
+            "familyMedicine": "Family medicine"
+            },
+            "socialMedia": "Social Media",
+            "copyright": "© 2024 HealthLink. All rights reserved.",
+            "termsAndConditions": "Terms and conditions",
+            "privacyPolicy": "Privacy policy"
+          }
+}
