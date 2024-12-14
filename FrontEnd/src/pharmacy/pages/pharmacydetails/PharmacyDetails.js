@@ -13,6 +13,7 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import { authContext } from '../../../shared/context/auth-context';
 import { path } from '../../../shared/utils/imagePath';
 import Skeleton from '../../../shared/components/skeleton/Skeleton';
+import LanguageContext from '../../../shared/context/LanguageContext';
 
 function PharmacyDetails() {
     const { pharmacy } = useLoaderData();
@@ -22,6 +23,7 @@ function PharmacyDetails() {
     const [isLoading, setIsLoading] = useState(false);
     const [logData, setLogData] = useState({err: ''});
     const { pharmacyId } = useParams();
+    const { translations } = useContext(LanguageContext);
 
     let navigate = useNavigate();
     let navigation = useNavigation();
@@ -105,19 +107,19 @@ function PharmacyDetails() {
         {navigation.state === 'loading' && <Skeleton />}
         {isLoading && <LoadingSpinner asOverlay />}
         <Modal  ref={myModalRef}>
-        <h3>{logData.err === 'authentication failed'? 'You must Login first': logData.err}</h3>
+        <h3>{logData.err === 'authentication failed'? translations.pharmacyDetails.loginPrompt : logData.err}</h3>
         </Modal>
         <div className='details-page'>
         <div className='pharmacy-details'>
-        <Modal ref={modalRef} addButton={{name:'Rate', handleClick: handleRate}}>
-        <h3>leave your review on this Pharmacy here.</h3>
+        <Modal ref={modalRef} addButton={{name: translations.pharmacyDetails.rate, handleClick: handleRate}}>
+        <h3>{translations.pharmacyDetails.leaveReview}</h3>
         <form>
         <textarea name="message" rows="5" cols="40" ref={textRef}>
         </textarea>
         </form>
         </Modal>
             <div className='pharmacy-details__head'>
-                <Button onClick={() => navigate(-1)} type='a' className='cta-white'><IoCaretBackCircle /> Back</Button>
+                <Button onClick={() => navigate(-1)} type='a' className='cta-white'><IoCaretBackCircle />{translations.pharmacyDetails.backButton}</Button>
                 <p>{pharmacy.title}</p>
             </div>
             <div className='pharmacy-details__body'>
@@ -131,24 +133,24 @@ function PharmacyDetails() {
             </div>
             <div className='pharmacy-details__inventory'>
             <div className='services'>
-            <h2 className=''> available services</h2>
+            <h2 className=''>{translations.pharmacyDetails.availableServices}</h2>
                 <ul>
-                    {pharmacy.avairableServices.length === 0? <h3>unavairable at the moment</h3> : pharmacy.avairableServices.map(service => <li key={service}>{service}</li>)}
+                    {pharmacy.avairableServices.length === 0? <h3>{translations.pharmacyDetails.unavailableServices}</h3> : pharmacy.avairableServices.map(service => <li key={service}>{service}</li>)}
                 </ul>
             </div>
             <div className='inventories'>
-            <h2>live inventory Medication List</h2>
+            <h2>{translations.pharmacyDetails.liveInventory}</h2>
                 <Inventory lastUpdated={pharmacy.inventory.updatedAt || 'not yet'} medicines={pharmacy.inventory.medicines} />
             </div>
             </div>
             <div className='buttons'>
-                <Button onClick={handleAddToFavourite}>Add to favourite</Button>
+                <Button onClick={handleAddToFavourite}>{translations.pharmacyDetails.addToFavourite}</Button>
                 <Button onClick={openModal} type='a' className='cta-white'>Rate</Button>
             </div>
             </div>
             </div>
             <div className='pharmacy-details__reviews'>
-            <h2>Students reviews</h2>
+            <h2>{translations.pharmacyDetails.studentsReviews}</h2>
                <PharmcyStudentReviews reviews={pharmacy.studentReviews} />
             </div>
         </div>

@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import useOpenModal from '../../../shared/hooks/useOpenModal';
 import Modal from '../../../shared/components/UI/Modal/modal';
 import { path } from '../../../shared/utils/imagePath';
+import LanguageContext from '../../../shared/context/LanguageContext';
 
 function StudentLogin(){
     const auth = useContext(authContext);
@@ -16,6 +17,8 @@ function StudentLogin(){
     const [logData, setLogData] = useState({err: ''});
     const navigate = useNavigate();
     const [modalRef, openModal] = useOpenModal();
+    const { translations } = useContext(LanguageContext);
+
 
     function handleSubmit(event){
         event.preventDefault();
@@ -63,14 +66,14 @@ function StudentLogin(){
         <Modal  ref={modalRef}>
         <p className='message'>{logData.err}</p>
         </Modal>
-        <p>student login</p>
+        <p>{translations.student_login}</p>
         <form>
             {isLoading && <LoadingSpinner asOverlay />}
-            <label htmlFor='email'>Email</label>
+            <label htmlFor='email'>{translations.email}</label>
             <input ref={emailRef} type="email" id="email" name="email" required />
-            <label htmlFor='password'>Password</label>
+            <label htmlFor='password'>{translations.password}</label>
             <input ref={pssRef} type="password" id="password" name="password" required />
-            <Button type='submit' id="button" onClick={handleSubmit} >Login</Button>
+            <Button type='submit' id="button" onClick={handleSubmit} >{translations.login_button}</Button>
         </form>
         </div>
         </div>

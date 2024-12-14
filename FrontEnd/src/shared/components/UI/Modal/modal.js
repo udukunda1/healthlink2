@@ -1,13 +1,16 @@
-import React, { useRef, useImperativeHandle, forwardRef } from 'react';
+import React, { useRef, useImperativeHandle, forwardRef, useContext } from 'react';
 import logo2 from '../../../../image/logo2.svg';
 //addButton={name: '', handleClick={...}};
 
 
 import Button from '../Button/Button';
 import './Modal.css';
+import LanguageContext from '../../../context/LanguageContext';
 
 const Modal = forwardRef(({children, addButton='', ...props}, ref) => {
   let a = useRef(null);
+  const { translations } = useContext(LanguageContext);
+
 
   function handleClose() {
     a.current.close();
@@ -39,7 +42,7 @@ const Modal = forwardRef(({children, addButton='', ...props}, ref) => {
       </div>
       <div className='modal-buttons'>
       {!!addButton && <Button onClick={addButton.handleClick} {...props}>{addButton.name}</Button>}
-      <Button onClick={handleClose} type='red' className='red' {...props}>Close</Button>
+      <Button onClick={handleClose} type='red' className='red' {...props}>{translations.close}</Button>
       </div>
     </dialog>
   );

@@ -50,5 +50,78 @@
             "copyright": "© 2024 HealthLink. All rights reserved.",
             "termsAndConditions": "Terms and conditions",
             "privacyPolicy": "Privacy policy"
-          }
+          },
+        "settings": "Settings",
+            "darkMode": "Dark Mode",
+            "fontSize": "Font Size",
+            "brightness": "Brightness",
+            "language": "Language",
+        "explorePharmacyNetwork": "Explore Our Pharmacy Network!",
+        "findPharmacies": "Find trusted Pharmacies near you and get the health support you need!",
+        "pharmacyDetails": {
+            "backButton": "Back",
+            "leaveReview": "Leave your review on this Pharmacy here.",
+            "addToFavourite": "Add to favourite",
+            "rate": "Rate",
+            "availableServices": "Available Services",
+            "unavailableServices": "Unavailable at the moment",
+            "liveInventory": "Live Inventory Medication List",
+            "studentsReviews": "Students Reviews",
+            "loginPrompt": "You must log in first"
+        },
+    "workingHours": "working",
+            "inventory": {
+            "noMedicines": "No medicines yet",
+            "lastUpdated": "Last updated at"
+        },
+    "availabilitySearch": {
+    "title": "Check Availability"
+    },
+    "searchableList": {
+    "placeholder": "Search for everything",
+    "noSearchTermTitle": "Instantly access what matters most.",
+    "matchesTitle": "Items Matching Your Search",
+    "matchesCount": "Items Matching Your Search: {{count}}"
+  },
+  "searchItem": {
+    "altText": "Click to view details",
+    "availableMeds": "Available Meds:",
+    "unavailable": "Unavailable at the moment!",
+    "andOthers": "and others"
+  },
+  "authNavigation": {
+    "student": "Student",
+    "pharmacy": "Pharmacy"
+  },
+  "studentNavigation": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "register": "Register"
+  },
+  "student_login": "Student Login",
+  "email": "Email",
+  "password": "Password",
+  "login_button": "Login",
+  "message_required_fields": "Both fields are required!",
+  "message_login_failed": "Login failed. Please try again.",
+  "message_something_went_wrong": "Something went wrong. Please try again later.",
+  "placeholder_email": "Enter your email",
+  "placeholder_password": "Enter your password",
+  "student_signup": "Student Sign Up",
+  "signup_button": "Sign Up",
+  "pharmacy_login": "Pharmacy Login",
+  "pharmacy_register": "Pharmacy Register",
+  "name": "Name",
+  "address": "Address",
+  "phone_number": "Phone Number",
+  "working_hours": "Working Hours",
+  "picture": "Picture",
+  "date": "Date",
+  "confirm_password": "Confirm Password",
+  "access_code": "Access Code (default: 1234)",
+  "register_button": "Register",
+  "favourites": "favourites",
+  "login_missing_favourite": "Your favorite pharmacy is missing. Log in to add it now!",
+  "no_favourite": "No favorite pharmacy selected. Choose one today!",
+  "close": "Close"
 }

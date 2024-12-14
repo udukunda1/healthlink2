@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Drawer } from "@mui/material";
 
 import './SideDrawer.css';
@@ -14,11 +14,13 @@ import DarkMode from "../UI/DarkMode/DarkMode";
 import Slide from '../slider/Slide';
 import SlideContrast from "../slider/SlideContrast";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";
+import LanguageContext from "../../context/LanguageContext";
 
 
 const RightDrawer = () => {
   // State to manage the drawer's open/close state
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const { translations } = useContext(LanguageContext);
 
   // Function to toggle the drawer
   const toggleDrawer = (open) => (event) => {
@@ -34,13 +36,13 @@ const RightDrawer = () => {
   // Content inside the drawer
   const drawerContent = (
     <div className="side-drawer">
-    <h3 style={{fontSize: '17px'}}> <img src={settin} alt="health link settings" />Settings</h3>
-    <h3><img src={moon} alt="settin" />Dark Mode <DarkMode /></h3>
-    <h3><img src={size} alt="settin" />Font Size <Slide /></h3>
-    <h3><img src={sun} alt="settin" />Brightness <SlideContrast /></h3>
-    <h3><img src={language} alt="settin" />Language <LanguageSelector /></h3>
-    <h3><img src={privacy} alt="settin" />Privacy Policy</h3>
-    <h3><img src={terms} alt="settin" />Terms and Conditions</h3>
+    <h3 style={{fontSize: '17px'}}> <img src={settin} alt="health link settings" />{translations.settings}</h3>
+    <h3><img src={moon} alt="settin" />{translations.darkMode} <DarkMode /></h3>
+    <h3><img src={size} alt="settin" />{translations.fontSize} <Slide /></h3>
+    <h3><img src={sun} alt="settin" />{translations.brightness} <SlideContrast /></h3>
+    <h3><img src={language} alt="settin" />{translations.language} <LanguageSelector /></h3>
+    <h3><img src={privacy} alt="settin" />{translations.footer.privacyPolicy}</h3>
+    <h3><img src={terms} alt="settin" />{translations.footer.termsAndConditions}</h3>
     </div>
   );
 

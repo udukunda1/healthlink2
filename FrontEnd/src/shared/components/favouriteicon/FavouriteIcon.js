@@ -7,11 +7,14 @@ import useOpenModal from '../../hooks/useOpenModal';
 import FavoutiteCard from '../favouritecard/FavoutiteCard';
 import { path } from '../../utils/imagePath';
 import ReactDOM from 'react-dom'; // Import ReactDOM for createPortal
+import LanguageContext from '../../context/LanguageContext';
 
 function FavouriteIcon() {
     const [logData, setLogData] = useState({favourite: []});
     const auth = useContext(authContext);
     const [modalRef, openModal] = useOpenModal();
+    const { translations } = useContext(LanguageContext);
+
 
     useEffect(() => {
         async function getFav(){
@@ -44,11 +47,11 @@ function FavouriteIcon() {
     const modalContent = (
         <Modal ref={modalRef}>
             <div className='favourite-modal'>
-                {auth.isLoggedIn && logData.favourite.length !== 0 && <h3>favourites</h3>}
-                <h3>{!auth.isLoggedIn && 'Your favorite pharmacy is missing. Log in to add it now!'}</h3>
+                {auth.isLoggedIn && logData.favourite.length !== 0 && <h3>{translations.favourites}</h3>}
+                <h3>{!auth.isLoggedIn && translations.login_missing_favourite}</h3>
                 {auth.isLoggedIn && logData.favourite.length !== 0 &&
                     <>{logData.favourite.map(pharma => <FavoutiteCard name={pharma.title} image={pharma.image} id={pharma.id} key={pharma.id} />)}</>}
-                {auth.isLoggedIn && logData.favourite.length === 0 && <h3>No favorite pharmacy selected. Choose one today!</h3>}
+                {auth.isLoggedIn && logData.favourite.length === 0 && <h3>{translations.no_favourite}</h3>}
             </div>
         </Modal>
     );

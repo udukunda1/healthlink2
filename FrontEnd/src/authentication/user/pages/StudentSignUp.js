@@ -7,6 +7,7 @@ import useOpenModal from "../../../shared/hooks/useOpenModal";
 import Modal from "../../../shared/components/UI/Modal/modal";
 import LoadingSpinner from "../../../shared/components/UI/loadingspinner/LoadingSpinner";
 import { path } from "../../../shared/utils/imagePath";
+import LanguageContext from "../../../shared/context/LanguageContext";
 
 function StudentSignUp(){
     const name = useRef();
@@ -19,6 +20,8 @@ function StudentSignUp(){
     const auth = useContext(authContext);
     const navigate = useNavigate();
     const [modalRef, openModal] = useOpenModal();
+    const { translations } = useContext(LanguageContext);
+
 
     function handleSubmit(event){
         event.preventDefault();
@@ -69,20 +72,20 @@ function StudentSignUp(){
         <Modal  ref={modalRef}>
         <p className='message'>{logData.err}</p>
         </Modal>
-        <p>student SignUp</p>
+        <p>{translations.student_signup}</p>
         <Form>
         {isLoading && <LoadingSpinner asOverlay />}
-            <label htmlFor='name'>Name</label>
+            <label htmlFor='name'>{translations.name}</label>
             <input ref={name} type="text" name="name" id="name" required />
-            <label htmlFor='email'>Email</label>
+            <label htmlFor='email'>{translations.email}</label>
             <input ref={email} type="email" name="email" id="email" required />
-            <label htmlFor='pic'>Picture</label>
+            <label htmlFor='pic'>{translations.picture}</label>
             <input ref={file} type="file" accept=".jpg,.png,.jpeg" name="file" id="pic" required />
-            <label htmlFor='password'>Password</label>
+            <label htmlFor='password'>{translations.password}</label>
             <input ref={password} type="password" name="password" id="Password" required />
-            <label htmlFor='confirmpassword'>Confirm Password</label>
+            <label htmlFor='confirmpassword'>{translations.confirm_password}</label>
             <input ref={confirmPassword} type="password" name="confirmPassword" id="confirmPassword" required />
-            <Button type='submit' id="button" onClick={(event) => handleSubmit(event)} >SignUp</Button>
+            <Button type='submit' id="button" onClick={(event) => handleSubmit(event)} >{translations.signup_button}</Button>
         </Form>
         </div>
         </div>

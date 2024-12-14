@@ -49,5 +49,78 @@
             "copyright": "© 2024 HealthLink. Tous droits réservés.",
             "termsAndConditions": "Termes et conditions",
             "privacyPolicy": "Politique de confidentialité"
-        }
+        },
+        "settings": "Paramètres",
+            "darkMode": "Mode Sombre",
+            "fontSize": "Taille de Police",
+            "brightness": "Luminosité",
+            "language": "Langue",
+            "explorePharmacyNetwork": "Explorez notre réseau de pharmacies !",
+            "findPharmacies": "Trouvez des pharmacies de confiance près de chez vous et obtenez le soutien sanitaire dont vous avez besoin !",
+            "pharmacyDetails": {
+                "backButton": "Retour",
+                "leaveReview": "Laissez votre avis sur cette pharmacie ici.",
+                "addToFavourite": "Ajouter aux favoris",
+                "rate": "Évaluer",
+                "availableServices": "Services disponibles",
+                "unavailableServices": "Indisponible pour le moment",
+                "liveInventory": "Liste d'inventaire des médicaments en direct",
+                "studentsReviews": "Avis des étudiants",
+                "loginPrompt": "Vous devez d'abord vous connecter"
+              },
+     "workingHours": "heures de travail",
+            "inventory": {
+            "noMedicines": "Pas encore de médicaments",
+            "lastUpdated": "Dernière mise à jour à"
+        },
+    "availabilitySearch": {
+    "title": "Vérifier la disponibilité"
+    },
+    "searchableList": {
+    "placeholder": "Rechercher tout",
+    "noSearchTermTitle": "Accédez instantanément à ce qui compte le plus.",
+    "matchesTitle": "Éléments correspondant à votre recherche",
+    "matchesCount": "Éléments correspondant à votre recherche : {{count}}"
+    },
+    "searchItem": {
+    "altText": "Cliquez pour voir les détails",
+    "availableMeds": "Médicaments disponibles :",
+    "unavailable": "Indisponible pour le moment !",
+    "andOthers": "et autres"
+  },
+  "authNavigation": {
+    "student": "Étudiant",
+    "pharmacy": "Pharmacie"
+  },
+  "studentNavigation": {
+    "login": "Connexion",
+    "signup": "Inscription",
+    "register": "Inscription"
+  },
+  "student_login": "Connexion Étudiant",
+  "email": "Email",
+  "password": "Mot de passe",
+  "login_button": "Se connecter",
+  "message_required_fields": "Les deux champs sont requis!",
+  "message_login_failed": "Échec de la connexion. Veuillez réessayer.",
+  "message_something_went_wrong": "Quelque chose s'est mal passé. Veuillez réessayer plus tard.",
+  "placeholder_email": "Entrez votre email",
+  "placeholder_password": "Entrez votre mot de passe",
+  "student_signup": "Inscription Étudiant",
+  "name": "Nom",
+  "picture": "Photo",
+  "confirm_password": "Confirmer le mot de passe",
+  "signup_button": "S'inscrire",
+  "pharmacy_login": "Connexion à la Pharmacie",
+  "phone_number": "Numéro de téléphone",
+  "pharmacy_register": "Inscription à la Pharmacie",
+  "address": "Adresse",
+  "working_hours": "Heures d'ouverture",
+  "date": "Date",
+  "access_code": "Code d'accès (par défaut : 1234)",
+  "register_button": "S'inscrire",
+  "favourites": "favoris",
+  "login_missing_favourite": "Votre pharmacie préférée est manquante. Connectez-vous pour l'ajouter maintenant !",
+  "no_favourite": "Aucune pharmacie favorite sélectionnée. Choisissez-en une aujourd'hui !",
+  "close": "Fermer"
 }

@@ -4,15 +4,17 @@ import PharmacyItemsDirectory from '../../components/pharmacy/PharmacyItemsDirec
 import './Directory.css';
 // import LoadingSpinner from '../../../shared/components/UI/loadingspinner/LoadingSpinner';
 import useOpenModal from '../../../shared/hooks/useOpenModal';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import Modal from '../../../shared/components/UI/Modal/modal';
 import { path } from '../../../shared/utils/imagePath';
 import Skeleton from '../../../shared/components/skeleton/Skeleton';
+import LanguageContext from '../../../shared/context/LanguageContext';
 
 function Directory(){
     const navigation = useNavigation();
     const [modalRef, openModal] = useOpenModal();
     const response = useLoaderData();
+    const { translations } = useContext(LanguageContext);
 
   useEffect(() => {
     if(response.error){
@@ -37,7 +39,7 @@ function Directory(){
         <ImageHolder2 />
         <div className='wrapper'>
         <section className='pharmacies'>
-            <h1>Pharmacy Directory.</h1>
+            <h1>{translations.pharmacyDirectory}</h1>
             <PharmacyItemsDirectory />
          </section>
          </div>

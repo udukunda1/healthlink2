@@ -3,8 +3,11 @@ import './SearchItem.css';
 import { MdMedication } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import { imagePath } from '../../../shared/utils/imagePath';
+import { useContext } from 'react';
+import LanguageContext from '../../../shared/context/LanguageContext';
 
 function SearchItem({title, address, image, time, meds, id}) {
+    const { translations } = useContext(LanguageContext);
     return(
         <Link to={`/directory/details/${id}`} className='search-item-card__link' >
         <motion.div
@@ -21,12 +24,12 @@ function SearchItem({title, address, image, time, meds, id}) {
                 <p>{address}</p>
                 <p>{'-'}{time}</p>
                 </div>
-                <h4>Available Meds:</h4>
-                {meds.length === 0? <p>Unavailable at the moment!</p>
+                <h4>{translations.searchItem.availableMeds}:</h4>
+                {meds.length === 0? <p>{translations.searchItem.unavailable}</p>
                 :
                 <ul>
                     {meds.map(med => <li key={med}><MdMedication />{med}</li>)}
-                    <li className='others'>and others</li>
+                    <li className='others'>{translations.searchItem.andOthers}</li>
                 </ul>
                 }
             </div>

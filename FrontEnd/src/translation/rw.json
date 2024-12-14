@@ -1,13 +1,13 @@
 {
     "home": "Ahabanza",
-    "pharmacyDirectory": "Farumasi",
+    "pharmacyDirectory": "Urutonde Rwa Farumasi",
     "medSearch": "Shaka",
     "login": "Injira",
     "logout": "Sohoka",
     "signup": "Iyandikishe",
     "interactWithOthers": "Kwifatanya n’abandi",
     "welcomeBack": "Ikaze",
-    "reminderToCheck": "Reba igihe",
+    "reminderToCheck": "Ibuke Kureba igihe imiti izarangirira",
         "emergencyCases": "Ibikorwa byihutirwa",
         "emergencyCallDescription": "Hamagara umurongo wacu wihariye kugira ngo ubone ubufasha bwihuse igihe buri segonda ari ingenzi.",
         "registerPharmacy": "Andikisha farumasi",
@@ -15,7 +15,8 @@
         "joinCommunity": "Jya mu muryango",
         "joinCommunityDescription": "Ba umwe mu muryango wacu uhuza abantu na serivisi z’ubuzima.",
         "joinedCommunity": "Winjiye mu muryango",
-        "joinedCommunityDescription": "Ikaze, {{name}}! Reka dushake imiti na farumasi mu buryo bworoshye.",
+        "joinedCommunityDescription": "Ikaze,",
+        "joinedCommunityDescription2": " Reka dushake imiti na farumasi mu buryo bworoshye.",
         "ctaText": "Witeguye gutangira? Jya mu muryango wacu kandi koroshya gushaka imiti!",
         "featuredPharmacies": "Farumasi zihariye",
         "seeMore": "Reba byinshi",
@@ -49,5 +50,78 @@
             "copyright": "© 2024 HealthLink. Uburenganzira bwose burabitswe.",
             "termsAndConditions": "Amabwiriza n'ibisabwa",
             "privacyPolicy": "Politiki y'ibanga"
-        }
+        },
+        "settings": "Igenamiterere",
+            "darkMode": "Uburyo Bw'ijoro",
+            "fontSize": "Ingano Y'inyuguti",
+            "brightness": "Urumuri",
+            "language": "Ururimi",
+         "explorePharmacyNetwork": "Irebere Farumasi Zose!",
+         "findPharmacies": "Shakisha farumasi zizewe hafi yawe kandi ubone ubufasha bw'ubuzima ukeneye!",
+         "pharmacyDetails": {
+            "backButton": "Subira inyuma",
+            "leaveReview": "Siga igitekerezo cyawe kuri iyi Farumasi hano.",
+            "addToFavourite": "Ongeraho mu byo ukunda",
+            "rate": "Hanga",
+            "availableServices": "Serivisi ziboneka",
+            "unavailableServices": "ubu nta serivisi zihari",
+            "liveInventory": "Urutonde rw’imiti rusanzwe ruhari",
+            "studentsReviews": "Ibitekerezo by'abanyeshuri",
+            "loginPrompt": "Ugomba kwinjira mbere"
+        },
+    "workingHours": "amasaha yo gukora",
+        "inventory": {
+        "noMedicines": "Nta miti ihari ubu",
+        "lastUpdated": "Iheruka kuvugururwa kuri"
+    },
+"availabilitySearch": {
+    "title": "Shaka urebe ibihari"
+        },
+        "searchableList": {
+    "placeholder": "Shakisha byose",
+    "noSearchTermTitle": "Hita ubona iby'ingenzi kurusha ibindi.",
+    "matchesTitle": "Ibintu bihuye n'ibyo washakishije",
+    "matchesCount": "Ibintu bihuye n'ibyo washakishije: {{count}}"
+  },
+  "searchItem": {
+    "altText": "Kanda urebe ibisobanuro",
+    "availableMeds": "Imiti iboneka:",
+    "unavailable": "Ntiboneka ubu!",
+    "andOthers": "n'iyindi"
+  },
+  "authNavigation": {
+    "student": "Umunyeshuri",
+    "pharmacy": "Farumasi"
+  },
+  "studentNavigation": {
+    "login": "Injira",
+    "signup": "Iyandikishe",
+    "register": "Andikisha"
+  },
+  "student_login": "Injira Nk'Umunyeshuri",
+  "email": "Imeyili",
+  "password": "Ijambo ry'ibanga",
+  "login_button": "Injira",
+  "message_required_fields": "Ibice byombi birakenewe!",
+  "message_login_failed": "Kwiyandikisha byanze. Gerageza nanone.",
+  "message_something_went_wrong": "Hari ikintu kitagenze neza. Gerageza nyuma.",
+  "placeholder_email": "Injiza imeyili yawe",
+  "placeholder_password": "Injiza ijambo ry'ibanga",
+  "student_signup": "Kwiyandikisha Nk'Umunyeshuri",
+  "name": "Izina",
+  "picture": "Ifoto",
+  "confirm_password": "Emeza Ijambo ry'ibanga",
+  "signup_button": "Kwiyandikisha",
+  "pharmacy_login": "Kwiyandikisha kwa Pharmacy",
+  "phone_number": "Numero ya Telefoni",
+  "pharmacy_register": "Kwiyandikisha kwa Pharmacy",
+  "address": "Aho iherereye",
+  "working_hours": "Amasaha y'akazi",
+  "date": "Itariki",
+  "access_code": "Kode y'uburenganzira (iribanza: 1234)",
+  "register_button": "Injira",
+  "favourites": "ibyo  ukunda",
+  "login_missing_favourite": "Farumasi ukunda irabuze. Injira kugirango uyongeremo ubu!",
+  "no_favourite": "Nta Farumasi y'ibyiciro ukunda wahisemo. Hitamo imwe uyu munsi!",
+  "close": "Funga"
 }

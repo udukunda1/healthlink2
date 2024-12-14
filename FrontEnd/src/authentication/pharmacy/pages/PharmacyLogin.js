@@ -8,6 +8,7 @@ import LoadingSpinner from '../../../shared/components/UI/loadingspinner/Loading
 import Button from "../../../shared/components/UI/Button/Button";
 import './PharmacyLogin.css';
 import { path } from '../../../shared/utils/imagePath';
+import LanguageContext from '../../../shared/context/LanguageContext';
 
 function PharmacyLogin(){
     const auth = useContext(pharmaAuthContext);
@@ -17,6 +18,8 @@ function PharmacyLogin(){
     const [logData, setLogData] = useState({err: ''});
     const navigate = useNavigate();
     const [modalRef, openModal] = useOpenModal();
+    const { translations } = useContext(LanguageContext);
+
 
     function handleSubmit(event){
         event.preventDefault();
@@ -66,13 +69,13 @@ function PharmacyLogin(){
         <Modal  ref={modalRef}>
         <p className='message'>{logData.err}</p>
         </Modal>
-        <p>Pharmacy login</p>
+        <p>{translations.pharmacy_login}</p>
         <form>
-            <label htmlFor='number'>Phone Number</label>
+            <label htmlFor='number'>{translations.phone_number}</label>
             <input type="number" id="number" ref={phoneRef} required />
-            <label htmlFor='password'>Password</label>
+            <label htmlFor='password'>{translations.password}</label>
             <input type="password" id="Password" ref={pssRef} required />
-            <Button type='submit' id="button" onClick={handleSubmit}>Login</Button>
+            <Button type='submit' id="button" onClick={handleSubmit}>{translations.login_button}</Button>
         </form>
         </div>
         </div>

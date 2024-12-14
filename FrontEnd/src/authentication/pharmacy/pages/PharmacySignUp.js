@@ -7,6 +7,7 @@ import Modal from "../../../shared/components/UI/Modal/modal";
 import useOpenModal from "../../../shared/hooks/useOpenModal";
 import LoadingSpinner from "../../../shared/components/UI/loadingspinner/LoadingSpinner";
 import { path } from "../../../shared/utils/imagePath";
+import LanguageContext from "../../../shared/context/LanguageContext";
 
 function PharmacySignUp(){
 
@@ -25,6 +26,8 @@ function PharmacySignUp(){
     const auth = useContext(pharmaAuthContext);
     const navigate = useNavigate();
     const [modalRef, openModal] = useOpenModal();
+    const { translations } = useContext(LanguageContext);
+
 
     function handleRegister(event){
         event.preventDefault();
@@ -81,27 +84,27 @@ function PharmacySignUp(){
         <Modal  ref={modalRef}>
         <p className='message'>{logData.err}</p>
         </Modal>
-        <p>Pharmacy Register</p>
+        <p>{translations.pharmacy_register}</p>
         <form>
-            <label htmlFor='name'>Name</label>
+            <label htmlFor='name'>{translations.name}</label>
             <input type="text" ref={nameRef} id="name" required />
-            <label htmlFor='address'>Address</label>
+            <label htmlFor='address'>{translations.address}</label>
             <input type="text" ref={addressRef} id="address" required />
-            <label htmlFor='number'>Phone Number</label>
+            <label htmlFor='number'>{translations.phone_number}</label>
             <input type="number" ref={phoneRef} id="number" required />
-            <label htmlFor='Hours'>Working Hours</label>
+            <label htmlFor='Hours'>{translations.working_hours}</label>
             <input type="text" ref={hoursRef} id="Hours" required />
-            <label htmlFor='photo'>Picture</label>
+            <label htmlFor='photo'>{translations.picture}</label>
             <input type="file" ref={pictureRef} id="photo" required />
-            <label htmlFor="date">Date</label>
+            <label htmlFor="date">{translations.date}</label>
             <input type="date" ref={dateRef} id="date" />
-            <label htmlFor='password'>Password</label>
+            <label htmlFor='password'>{translations.password}</label>
             <input type="password" ref={passwordRef} id="Password" required />
-            <label htmlFor='confirmpassword'>Confirm Password</label>
+            <label htmlFor='confirmpassword'>{translations.confirm_password}</label>
             <input type="password" ref={confirmPasswordRef} id="confirmPassword" required />
-            <label htmlFor='code'>Access Code:  default(1234)</label>
+            <label htmlFor='code'>{translations.access_code}</label>
             <input type="number" ref={codeRef} id="code" required />
-            <Button type='submit' id="button" onClick={(event) => handleRegister(event)}>Register</Button>
+            <Button type='submit' id="button" onClick={(event) => handleRegister(event)}>{translations.register_button}</Button>
         </form>
         </div>
         </div>
