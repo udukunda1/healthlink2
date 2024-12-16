@@ -7,11 +7,12 @@ import useOpenModal from "../../../shared/hooks/useOpenModal";
 import Modal from "../../../shared/components/UI/Modal/modal";
 import LoadingSpinner from "../../../shared/components/UI/loadingspinner/LoadingSpinner";
 import LanguageContext from "../../../shared/context/LanguageContext";
+import ImageUpload from "../../../shared/components/UI/imagepicker/ImageUpload";
 
 function StudentSignUp(){
     const name = useRef();
     const email = useRef();
-    const file = useRef();
+    // const file = useRef();
     const password = useRef();
     const confirmPassword = useRef();
     const [isLoading, setIsLoading] = useState();
@@ -20,17 +21,20 @@ function StudentSignUp(){
     const navigate = useNavigate();
     const [modalRef, openModal] = useOpenModal();
     const { translations } = useContext(LanguageContext);
+    const [pickedFile, setPickedFile] = useState();
 
 
     function handleSubmit(event){
         event.preventDefault();
 
         async function signUp(){
+            console.log(pickedFile);
             try{
                 const formData = new FormData();
                 formData.append('name', name.current.value);
                 formData.append('email', email.current.value);
-                formData.append('picture', file.current.files[0]);
+                // formData.append('picture', file.current.files[0]);
+                formData.append('picture', pickedFile);
                 formData.append('password', password.current.value);
                 formData.append('confirmPassword', confirmPassword.current.value);
                 setIsLoading(true);
@@ -79,7 +83,8 @@ function StudentSignUp(){
             <label htmlFor='email'>{translations.email}</label>
             <input ref={email} type="email" name="email" id="email" required />
             <label htmlFor='pic'>{translations.picture}</label>
-            <input ref={file} type="file" accept=".jpg,.png,.jpeg" name="file" id="pic" required />
+            {/* <input ref={file} type="file" accept=".jpg,.png,.jpeg" name="file" id="pic" required /> */}
+            <ImageUpload setPickedFile={setPickedFile} id='image' />
             <label htmlFor='password'>{translations.password}</label>
             <input ref={password} type="password" name="password" id="Password" required />
             <label htmlFor='confirmpassword'>{translations.confirm_password}</label>

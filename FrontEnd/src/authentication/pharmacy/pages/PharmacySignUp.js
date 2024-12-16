@@ -7,6 +7,7 @@ import Modal from "../../../shared/components/UI/Modal/modal";
 import useOpenModal from "../../../shared/hooks/useOpenModal";
 import LoadingSpinner from "../../../shared/components/UI/loadingspinner/LoadingSpinner";
 import LanguageContext from "../../../shared/context/LanguageContext";
+import ImageUpload from "../../../shared/components/UI/imagepicker/ImageUpload";
 
 function PharmacySignUp(){
 
@@ -14,7 +15,7 @@ function PharmacySignUp(){
     const addressRef = useRef();
     const phoneRef = useRef();
     const hoursRef = useRef();
-    const pictureRef = useRef();
+    // const pictureRef = useRef();
     const dateRef = useRef();
     const passwordRef = useRef();
     const confirmPasswordRef = useRef();
@@ -26,6 +27,7 @@ function PharmacySignUp(){
     const navigate = useNavigate();
     const [modalRef, openModal] = useOpenModal();
     const { translations } = useContext(LanguageContext);
+    const [pickedFile, setPickedFile] = useState();
 
 
     function handleRegister(event){
@@ -38,7 +40,8 @@ function PharmacySignUp(){
                 formData.append('address', addressRef.current.value);
                 formData.append('number', phoneRef.current.value);
                 formData.append('workingHours', hoursRef.current.value);
-                formData.append('image', pictureRef.current.files[0]);
+                // formData.append('image', pictureRef.current.files[0]);
+                formData.append('image', pickedFile);
                 formData.append('date', dateRef.current.value);
                 formData.append('password', passwordRef.current.value);
                 formData.append('confirmPassword', confirmPasswordRef.current.value);
@@ -94,7 +97,8 @@ function PharmacySignUp(){
             <label htmlFor='Hours'>{translations.working_hours}</label>
             <input type="text" ref={hoursRef} id="Hours" required />
             <label htmlFor='photo'>{translations.picture}</label>
-            <input type="file" ref={pictureRef} id="photo" required />
+            {/* <input type="file" ref={pictureRef} id="photo" required /> */}
+            <ImageUpload setPickedFile={setPickedFile} id='image' />
             <label htmlFor="date">{translations.date}</label>
             <input type="date" ref={dateRef} id="date" />
             <label htmlFor='password'>{translations.password}</label>
