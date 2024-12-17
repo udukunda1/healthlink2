@@ -18,6 +18,7 @@ import PharmacySignUp from './authentication/pharmacy/pages/PharmacySignUp';
 import ContextProvider from './shared/context/auth-context';
 import PharmaContextProvider from './shared/context/pharma-auth-context';
 import { LanguageProvider } from './shared/context/LanguageContext';
+import TextToSpeechProvider from './shared/context/texttospeech';
 
 const router = createBrowserRouter([
   {
@@ -64,13 +65,15 @@ function App() {
 
 
   return (
+    <TextToSpeechProvider>
     <LanguageProvider>
     <PharmaContextProvider>
     <ContextProvider>
     <RouterProvider router={router} />
     </ContextProvider>
     </PharmaContextProvider>
-  </LanguageProvider>
+    </LanguageProvider>
+    </TextToSpeechProvider>
   )
 }
 

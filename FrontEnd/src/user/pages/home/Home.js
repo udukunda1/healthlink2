@@ -105,6 +105,9 @@ function Home() {
       <div className='home'>
 
       <StudentExperience />
+      {/* <TextToSpeech /> */}
+      {/* <TextToSpeechToggle /> */}
+
       <div className='cta-getstarted'>
       <p className='cta-getstarted__text'>{translations.ctaText}</p>
       <div className='cta-getstarted__button'>

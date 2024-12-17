@@ -15,12 +15,14 @@ import Slide from '../slider/Slide';
 import SlideContrast from "../slider/SlideContrast";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";
 import LanguageContext from "../../context/LanguageContext";
+import TextToSpeechToggle from "../texttospeechtoggle/TextToSpeechToggle";
 
 
 const RightDrawer = () => {
   // State to manage the drawer's open/close state
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { translations } = useContext(LanguageContext);
+
 
   // Function to toggle the drawer
   const toggleDrawer = (open) => (event) => {
@@ -43,6 +45,7 @@ const RightDrawer = () => {
     <h3><img src={language} alt="settin" />{translations.language} <LanguageSelector /></h3>
     <h3><img src={privacy} alt="settin" />{translations.footer.privacyPolicy}</h3>
     <h3><img src={terms} alt="settin" />{translations.footer.termsAndConditions}</h3>
+    <h3><TextToSpeechToggle /></h3>
     </div>
   );
 
