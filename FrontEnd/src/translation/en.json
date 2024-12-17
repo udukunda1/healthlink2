@@ -123,5 +123,8 @@
   "favourites": "favourites",
   "login_missing_favourite": "Your favorite pharmacy is missing. Log in to add it now!",
   "no_favourite": "No favorite pharmacy selected. Choose one today!",
-  "close": "Close"
+  "close": "Close",
+  "screenreader": "Screen Reader",
+  "enable": "Enable",
+  "disable": "Disable"
 }

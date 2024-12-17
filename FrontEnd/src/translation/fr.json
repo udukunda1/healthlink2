@@ -122,5 +122,8 @@
   "favourites": "favoris",
   "login_missing_favourite": "Votre pharmacie préférée est manquante. Connectez-vous pour l'ajouter maintenant !",
   "no_favourite": "Aucune pharmacie favorite sélectionnée. Choisissez-en une aujourd'hui !",
-  "close": "Fermer"
+  "close": "Fermer",
+  "screenreader": "Lecteur d'écran",
+  "enable": "Activer",
+  "disable": "Désactiver"
 }

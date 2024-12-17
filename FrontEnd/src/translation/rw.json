@@ -123,5 +123,8 @@
   "favourites": "ibyo  ukunda",
   "login_missing_favourite": "Farumasi ukunda irabuze. Injira kugirango uyongeremo ubu!",
   "no_favourite": "Nta Farumasi y'ibyiciro ukunda wahisemo. Hitamo imwe uyu munsi!",
-  "close": "Funga"
+  "close": "Funga",
+  "screenreader": "Umusomyi",
+  "enable": "Shyiramo",
+  "disable": "Kuramo"
 }

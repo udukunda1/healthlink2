@@ -5,7 +5,7 @@ export const TextToSpeechContext = createContext();
 const TextToSpeechProvider = ({ children }) => {
   const [enabled, setEnabled] = useState(() => {
     const savedState = localStorage.getItem("textToSpeechEnabled");
-    return savedState !== null ? JSON.parse(savedState) : true;
+    return savedState !== null ? JSON.parse(savedState) : false;
   });
 
   useEffect(() => {
@@ -60,7 +60,7 @@ const TextToSpeechProvider = ({ children }) => {
     // Cleanup function
     return () => {
       observer.disconnect();
-      document.querySelectorAll("p, a, h1, h2, h3").forEach((tag) => {
+      document.querySelectorAll("p, a, h1, h2, h3, h4, button, li").forEach((tag) => {
         tag.removeEventListener("mouseenter", handleHover);
         tag.removeEventListener("mouseleave", handleLeave);
       });
