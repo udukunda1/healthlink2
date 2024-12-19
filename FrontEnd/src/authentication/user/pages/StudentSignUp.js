@@ -12,7 +12,6 @@ import ImageUpload from "../../../shared/components/UI/imagepicker/ImageUpload";
 function StudentSignUp(){
     const name = useRef();
     const email = useRef();
-    // const file = useRef();
     const password = useRef();
     const confirmPassword = useRef();
     const [isLoading, setIsLoading] = useState();
@@ -33,7 +32,6 @@ function StudentSignUp(){
                 const formData = new FormData();
                 formData.append('name', name.current.value);
                 formData.append('email', email.current.value);
-                // formData.append('picture', file.current.files[0]);
                 formData.append('picture', pickedFile);
                 formData.append('password', password.current.value);
                 formData.append('confirmPassword', confirmPassword.current.value);
@@ -83,7 +81,6 @@ function StudentSignUp(){
             <label htmlFor='email'>{translations.email}</label>
             <input ref={email} type="email" name="email" id="email" required />
             <label htmlFor='pic'>{translations.picture}</label>
-            {/* <input ref={file} type="file" accept=".jpg,.png,.jpeg" name="file" id="pic" required /> */}
             <ImageUpload setPickedFile={setPickedFile} id='image' />
             <label htmlFor='password'>{translations.password}</label>
             <input ref={password} type="password" name="password" id="Password" required />
